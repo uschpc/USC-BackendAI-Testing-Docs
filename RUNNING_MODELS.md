@@ -1,6 +1,6 @@
 Objective: Guide for starting compute sessions and running interactive environments.
 
-## 2. Launching your First Session
+## Launching your First Session
 
 1. **Click "Sessions"** in the sidebar and select **"Launch"**.
 2. **Select an Image:** Choose an environment (e.g., PyTorch, TensorFlow, or Scikit-learn).
