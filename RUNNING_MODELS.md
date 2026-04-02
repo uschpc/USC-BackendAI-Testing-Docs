@@ -9,3 +9,9 @@ Objective: Guide for starting compute sessions and running interactive environme
     * **GPU:** Request a fractional (e.g., 0.5) or full GPU.
 4. **Virtual Folders:** Mount your data folders so they appear inside your container.
 5. **Start:** Click **Launch**.
+
+##  Working in the Environment
+Once a session is "Running," you can access it via:
+* **Jupyter Notebook/Lab:** Web-based IDE for coding.
+* **Terminal:** A full bash shell for custom scripts.
+* **SSH:** Connect your local IDE (like VS Code) to the remote container.
