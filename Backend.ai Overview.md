@@ -1,6 +1,6 @@
 Hao: Backend.ai Overview & Software modules
 
-Cesar: Data Managemetn
+Cesar: Data Management
 
 Tomek: Interactive Apps
 
