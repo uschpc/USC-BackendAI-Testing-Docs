@@ -10,8 +10,16 @@ Objective: Instructions for account creation and accessing the Backend.ai WebUI.
 
 ## 1. Accessing the Platform
 
-1. **Login:** Navigate to the internal URL provided by your administrator.
-2. **Dashboard:** View your active sessions, resource usage (CPU/GPU), and storage from the home screen.
+
+To get started, navigate to the login portal. 
+
+### Login via USC SSO
+For University of Southern California users, please use the specialized sign-on link:
+
+1. Locate the **LOGIN WITH USC** link at the bottom of the form.
+2. Follow the prompts on the USC Shibboleth page.
+
+![Backend AI Login Screen](images/login.png)
 
 ## 2. Use Cases
 
