@@ -8,7 +8,7 @@ Using a module system like Lmod is helpful because applications and libraries co
 When you log in, we automatically load a module named `usc` for you, which is actually a collection of modules. You can enter the `module list` command to view them:
 
 ```
-[user@discovery3 ~]$ module list
+work@main1[hYkzzAej-session]:~$ module list
 
 Currently Loaded Modules:
   1) gcc/13.3.0      3) openblas/0.3.28   5) usc/13.3.0
@@ -27,7 +27,7 @@ If you do not want these modules to be automatically loaded when you log in, add
 To see what modules you can load into your environment, enter the command `module av`. With `gcc/13.3.0` loaded, this will print a large number of available modules:
 
 ```
-user@discovery1: module av
+work@main1[hYkzzAej-session]:~$: module av
 
 ---- /apps/spack/2406/apps/lmod/linux-rocky8-x86_64/openmpi/5.0.5-mufqd73/gcc/13.3.0 ----
    adiak/0.4.0                     hmmer/3.4                 parmetis/4.0.3         (D)
@@ -60,7 +60,7 @@ user@discovery1: module av
 To unload all your loaded modules, enter the command `module purge`. Then `module list` will return `No modules loaded`. If you enter `module av` again, then you will see only the core modules. These are primarily compilers but can also include applications like MATLAB that are pre-built and have no dependencies:
 
 ```
-[user@discovery1 ~]$ module av
+work@main1[hYkzzAej-session]:~$  module av
 
 ----------------------- /apps/spack/2406/apps/lmod/linux-rocky8-x86_64/openmpi/5.0.5-mufqd73/gcc/13.3.0 -----------------------
    adiak/0.4.0                     hmmer/3.4                 parmetis/4.0.3         (D)
@@ -94,7 +94,7 @@ If you know the name of a software package, use the `module spider` command to f
 For example, to search for Open MPI modules:
 
 ```
-[user@discovery1 ~]$ module spider openmpi
+work@main1[hYkzzAej-session]:~$  module spider openmpi
 
 -----------------------------------------------------------------------------------
   openmpi:
@@ -115,7 +115,7 @@ For example, to search for Open MPI modules:
 This shows that there are two versions of Open MPI available. For more specific information, add the version to your command as given in the example:
 
 ```
-[user@discovery1 ~]$ module spider openmpi/5.0.5
+work@main1[hYkzzAej-session]:~$  module spider openmpi/5.0.5
 
 -----------------------------------------------------------------------------------
   openmpi: openmpi/5.0.5
@@ -143,7 +143,7 @@ If you do not know the exact name of a software package, use the `module keyword
 For example, to search with the keyword `sam`:
 
 ```
-[user@discovery1 ~]$ module keyword sam
+work@main1[hYkzzAej-session]:~$  module keyword sam
 ------------------------------------------------------------------------
 
 The following modules match your search criteria: "sam"
@@ -258,13 +258,13 @@ This ensures that the loaded modules are compatible with one another.
 For example, let's say you want to use the `jellyfish` package compiled with `gcc/13.3.0`. You would load it with:
 
 ```
-[user@discovery1 ~]$ module load gcc/13.3.0 jellyfish
+work@main1[hYkzzAej-session]:~$  module load gcc/13.3.0 jellyfish
 ```
 
 If for some reason you need to switch to the `intel` compiler set, you can use the `module swap` command to swap out the `gcc` compiler:
 
 ```
-[user@discovery1 ~]$ module swap gcc intel
+work@main1[hYkzzAej-session]:~$  module swap gcc intel
 
 Due to MODULEPATH changes, the following have been reloaded:
   1) jellyfish/2.3.0
@@ -275,7 +275,7 @@ Lmod automatically changes the `jellyfish` module to one that was compiled with 
 The module system can also automatically replace or deactivate modules to ensure the packages that are loaded are compatible with each other. For example, switching from `gcc/13.3.0` to `gcc/12.3.0`:
 
 ```
-[user@discovery1 ~]$ module load gcc/12.3.0
+work@main1[hYkzzAej-session]:~$  module load gcc/12.3.0
 
 Inactive Modules:
   1) openblas/0.3.28     2) openmpi/5.0.5
@@ -311,7 +311,7 @@ module show <software_name>
 This will print the contents of the module file. For example:
 
 ```
-[user@discovery1 ~]$ module show gcc
+work@main1[hYkzzAej-session]:~$ module show gcc
 ------------------------------------------------------------------------------------
    /apps/lmod/modules/compilers/gcc/13.3.0.lua:
 ------------------------------------------------------------------------------------
@@ -357,30 +357,30 @@ Another useful feature of Lmod is saving collections of modules for easier loadi
 With a set of desired modules loaded, use `module save` to save them as your default collection:
 
 ```
-[user@discovery1 ~]$ module purge
-[user@discovery1 ~]$ module load gcc/13.3.0 r/4.4.2
-[user@discovery1 ~]$ module save
+work@main1[hYkzzAej-session]:~$  module purge
+work@main1[hYkzzAej-session]:~$  module load gcc/13.3.0 r/4.4.2
+work@main1[hYkzzAej-session]:~$  module save
 Saved current collection of modules to: "default"
 ```
 
 Then the next time you log in use `module restore` to load your default collection:
 
 ```
-[user@discovery1 ~]$ module restore
+work@main1[hYkzzAej-session]:~$  module restore
 Restoring modules from user's default
 ```
 
 You can also save multiple collections by specifying a collection name:
 
 ```
-[user@discovery1 ~]$ module save mymodules
+work@main1[hYkzzAej-session]:~$  module save mymodules
 Saved current collection of modules to: "mymodules"
 ```
 
 Then use the collection name when restoring:
 
 ```
-[user@discovery1 ~]$ module restore mymodules
+work@main1[hYkzzAej-session]:~$  module restore mymodules
 Restoring modules from user's mymodules
 ```
 
