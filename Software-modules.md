@@ -137,50 +137,7 @@ work@main1[hYkzzAej-session]:~$  module spider openmpi/5.0.5
       developers and computer science researchers.
 ```
 
-#### Using `module keyword`
 
-If you do not know the exact name of a software package, use the `module keyword` command instead to search for modules.
-
-For example, to search with the keyword `sam`:
-
-```
-work@main1[hYkzzAej-session]:~$  module keyword sam
-------------------------------------------------------------------------
-
-The following modules match your search criteria: "sam"
-------------------------------------------------------------------------
-
-  bamutil: bamutil/1.0.13
-
-  cufflinks: cufflinks/2.2.1
-
-  jags: jags/4.3.0
-
-  libbsd: libbsd/0.9.1, libbsd/0.10.0
-
-  pcre: pcre/8.42, pcre/8.43
-
-  pcre2: pcre2/10.31
-
-  perl-text-soundex: perl-text-soundex/3.05
-
-  picard: picard/2.20.8
-
-  samtools: samtools/1.10, samtools/18.0.4
-
-------------------------------------------------------------------------
-
-To learn more about a package execute:
-
-   $ module spider Foo
-
-where "Foo" is the name of a module.
-
-To find detailed information about a particular package, specify the version if there is more than one:
-
-   $ module spider Foo/11.1
-
-------------------------------------------------------------------------
 ```
 
 ### Loading and unloading software
