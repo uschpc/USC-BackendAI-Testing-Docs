@@ -21,8 +21,6 @@ This is our default software stack and the recommended one for most users, based
 
 The naming convention for modules is `<software_name>/<version>` (e.g., `gcc/13.3.0`).
 
-If you do not want these modules to be automatically loaded when you log in, add `module purge` to your ~/.bashrc.
-
 #### Using `module av`
 
 To see what modules you can load into your environment, enter the command `module av`. With `gcc/13.3.0` loaded, this will print a large number of available modules:
