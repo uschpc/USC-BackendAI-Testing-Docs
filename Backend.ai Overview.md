@@ -12,7 +12,7 @@ To get started, navigate to the login portal.
 ### Login via USC SSO
 For University of Southern California users, please use the specialized sign-on link:
 
-1. Locate the **LOGIN WITH USC** link at the bottom of the form.
+1. Locate the **LOGIN WITH USC** link at the bottom of the login page.
 2. Follow the prompts on the USC Shibboleth page.
 
 ![Backend AI Login Screen](images/login.png)
