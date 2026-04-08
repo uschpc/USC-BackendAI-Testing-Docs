@@ -1,1 +1,393 @@
-Hao
+
+On Backend.ai System, users can find and load software using the [Lmod](https://lmod.readthedocs.io/en/latest/) **module system**. Lmod dynamically changes your shell environment using **module files** to ensure the software applications and libraries you use are compatible. Module files are configuration files, written as Lua scripts, that instruct how to make an application or library available during your shell session. Typically, a module file contains instructions to initialize or modify environment variables, such as `PATH`.
+
+Using a module system like Lmod is helpful because applications and libraries compiled with one compiler are not necessarily compatible with applications and libraries compiled with a different compiler, and your shell environment must be changed to accommodate these incompatibilities. **With Lmod, resetting your environment is done dynamically when you load new modules**. Loading a module will make available only compatible software for you to use. In this way, modules are organized in a hierarchy based on compilers.
+
+### Finding software
+
+When you log in, we automatically load a module named `usc` for you, which is actually a collection of modules. You can enter the `module list` command to view them:
+
+```
+[user@discovery3 ~]$ module list
+
+Currently Loaded Modules:
+  1) gcc/13.3.0      3) openblas/0.3.28   5) usc/13.3.0
+  2) python/3.11.9   4) openmpi/5.0.5
+
+```
+
+This is our default software stack and the recommended one for most users, based on the GCC 13.3.0 compiler.
+
+The naming convention for modules is `<software_name>/<version>` (e.g., `gcc/13.3.0`).
+
+If you do not want these modules to be automatically loaded when you log in, add `module purge` to your ~/.bashrc.
+
+#### Using `module av`
+
+To see what modules you can load into your environment, enter the command `module av`. With `gcc/13.3.0` loaded, this will print a large number of available modules:
+
+```
+user@discovery1: module av
+
+---- /apps/spack/2406/apps/lmod/linux-rocky8-x86_64/openmpi/5.0.5-mufqd73/gcc/13.3.0 ----
+   adiak/0.4.0                     hmmer/3.4                 parmetis/4.0.3         (D)
+   armadillo/12.8.1                hpcg/3.1                  poppler/23.04.0
+   arpack-ng/3.9.0                 hpl/2.3                   qmcpack/3.17.1
+   arrow/7.0.0                     hypre/2.31.0              quantum-espresso/7.3.1
+   boost/1.85.0                    ior/3.3.0                 scotch/7.0.3
+   butterflypack/2.4.0             libcircle/0.3.0           sfcgal/1.5.1
+   cgal/5.6                        lwgrp/1.0.5               silo/4.11.1
+   charmpp/7.0.0                   mpigraph/main             slate/2023.11.05
+   dtcmp/1.1.4                     namd/3.0b6                strumpack/7.2.0
+   elpa/2023.11.001-patched        netcdf-c/4.9.2            superlu-dist/8.2.1
+   fftw/3.3.10              (D)    netcdf-cxx4/4.3.1         thrift/0.18.1
+   gdal/3.9.2                      netcdf-fortran/4.6.1      zoltan/3.901
+   gmt/6.5.0                       netlib-scalapack/2.2.0
+   hdf5/1.14.3              (D)    parallel-netcdf/1.12.3
+
+----------------------------- /apps/lmod/modules/gcc/13.3.0 -----------------------------
+   gromacs/2024.3
+
+--------------- /apps/spack/2406/apps/lmod/linux-rocky8-x86_64/gcc/13.3.0 ---------------
+   alsa-lib/1.2.12                           libtool/2.4.7
+   ant/1.10.14                               libunistring/1.2
+   aom/v3.9.1                                libunwind/1.6.2
+   argobots/1.2                              libuv/1.46.0
+   aria2/1.37.0                              libvorbis/1.3.7
+...
+```
+
+To unload all your loaded modules, enter the command `module purge`. Then `module list` will return `No modules loaded`. If you enter `module av` again, then you will see only the core modules. These are primarily compilers but can also include applications like MATLAB that are pre-built and have no dependencies:
+
+```
+[user@discovery1 ~]$ module av
+
+----------------------- /apps/spack/2406/apps/lmod/linux-rocky8-x86_64/openmpi/5.0.5-mufqd73/gcc/13.3.0 -----------------------
+   adiak/0.4.0                     hmmer/3.4                 parmetis/4.0.3         (D)
+   armadillo/12.8.1                hpcg/3.1                  poppler/23.04.0
+   arpack-ng/3.9.0                 hpl/2.3                   qmcpack/3.17.1
+   arrow/7.0.0                     hypre/2.31.0              quantum-espresso/7.3.1
+   boost/1.85.0                    ior/3.3.0                 scotch/7.0.3
+   butterflypack/2.4.0             libcircle/0.3.0           sfcgal/1.5.1
+   cgal/5.6                        lwgrp/1.0.5               silo/4.11.1
+   charmpp/7.0.0                   mpigraph/main             slate/2023.11.05
+   dtcmp/1.1.4                     namd/3.0b6                strumpack/7.2.0
+   elpa/2023.11.001-patched        netcdf-c/4.9.2            superlu-dist/8.2.1
+   fftw/3.3.10              (D)    netcdf-cxx4/4.3.1         thrift/0.18.1
+   gdal/3.9.2                      netcdf-fortran/4.6.1      zoltan/3.901
+   gmt/6.5.0                       netlib-scalapack/2.2.0
+   hdf5/1.14.3              (D)    parallel-netcdf/1.12.3
+
+  Where:
+   D:  Default Module
+
+Use `module spider" to find all possible modules and extensions.
+Use "module keyword key1 key2 ..." to search for all possible modules matching any of the "keys".
+```
+
+To explore the software stacks available, load one of these core modules and then see which new ones are unlocked. For example, to see all applications built with a certain compiler, load that compiler module and then enter `module av`.
+
+#### Using `module spider`
+
+If you know the name of a software package, use the `module spider` command to find out if it is available and how to load it.
+
+For example, to search for Open MPI modules:
+
+```
+[user@discovery1 ~]$ module spider openmpi
+
+-----------------------------------------------------------------------------------
+  openmpi:
+-----------------------------------------------------------------------------------
+     Versions:
+        openmpi/5.0.4
+        openmpi/5.0.5
+
+-----------------------------------------------------------------------------------
+  For detailed information about a specific "openmpi" package (including how to load the modules) use the module's full name.
+  Note that names that have a trailing (E) are extensions provided by other modules.
+  For example:
+
+     $ module spider openmpi/5.0.5
+-----------------------------------------------------------------------------------
+```
+
+This shows that there are two versions of Open MPI available. For more specific information, add the version to your command as given in the example:
+
+```
+[user@discovery1 ~]$ module spider openmpi/5.0.5
+
+-----------------------------------------------------------------------------------
+  openmpi: openmpi/5.0.5
+-----------------------------------------------------------------------------------
+
+    You will need to load all module(s) on any one of the lines below before the "openmpi/5.0.5" module is available to load.
+
+      gcc/13.3.0
+ 
+    Help:
+      An open source Message Passing Interface implementation. The Open MPI
+      Project is an open source Message Passing Interface implementation that
+      is developed and maintained by a consortium of academic, research, and
+      industry partners. Open MPI is therefore able to combine the expertise,
+      technologies, and resources from all across the High Performance
+      Computing community in order to build the best MPI library available.
+      Open MPI offers advantages for system and software vendors, application
+      developers and computer science researchers.
+```
+
+#### Using `module keyword`
+
+If you do not know the exact name of a software package, use the `module keyword` command instead to search for modules.
+
+For example, to search with the keyword `sam`:
+
+```
+[user@discovery1 ~]$ module keyword sam
+------------------------------------------------------------------------
+
+The following modules match your search criteria: "sam"
+------------------------------------------------------------------------
+
+  bamutil: bamutil/1.0.13
+
+  cufflinks: cufflinks/2.2.1
+
+  jags: jags/4.3.0
+
+  libbsd: libbsd/0.9.1, libbsd/0.10.0
+
+  pcre: pcre/8.42, pcre/8.43
+
+  pcre2: pcre2/10.31
+
+  perl-text-soundex: perl-text-soundex/3.05
+
+  picard: picard/2.20.8
+
+  samtools: samtools/1.10, samtools/18.0.4
+
+------------------------------------------------------------------------
+
+To learn more about a package execute:
+
+   $ module spider Foo
+
+where "Foo" is the name of a module.
+
+To find detailed information about a particular package, specify the version if there is more than one:
+
+   $ module spider Foo/11.1
+
+------------------------------------------------------------------------
+```
+
+### Loading and unloading software
+
+Typically, loading modules is as simple as entering `module load <software_name>`. The `<software_name>` must be visible when you run `module av`.
+
+By entering:
+
+```
+module load <software_name>
+```
+
+Lmod will set your environment such that the software specified in `<software_name>` will be placed in your `PATH`, and then you can run the commands associated with `<software_name>`.
+
+If there are multiple versions of `<software_name>`, you can specify a version:
+
+```
+module load <software_name>/<version>
+```
+
+For example, to load `gcc` version 12.3.0, enter:
+
+```
+module load gcc/12.3.0
+```
+
+If no version is specified:
+
+```
+module load gcc
+```
+
+then the default version will be loaded. The default version is indicated with a `(D)` next to it after running `module av`.
+
+To unload a specific module, enter:
+
+```
+module unload <software_name>
+```
+
+To see the modules that you currently have loaded, enter:
+
+```
+module list
+```
+
+To see all modules that are compatible with the currently loaded modules and available to be loaded, enter:
+
+```
+module av
+```
+
+To unload all currently loaded modules and reset your environment, enter:
+
+```
+module purge
+```
+
+To reload the default `usc` module collection, enter:
+
+```
+module load usc
+```
+
+Enter `module help` to view more information about the available `module` commands.
+
+### Environment management
+
+One of the best features of Lmod is that it tracks software dependencies automatically. Importantly, there are two safety features when using the module system:
+
+1. Only one version of a module can be loaded at once
+2. Only one compiler and MPI implementation can be loaded at once
+
+This ensures that the loaded modules are compatible with one another.
+
+For example, let's say you want to use the `jellyfish` package compiled with `gcc/13.3.0`. You would load it with:
+
+```
+[user@discovery1 ~]$ module load gcc/13.3.0 jellyfish
+```
+
+If for some reason you need to switch to the `intel` compiler set, you can use the `module swap` command to swap out the `gcc` compiler:
+
+```
+[user@discovery1 ~]$ module swap gcc intel
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) jellyfish/2.3.0
+```
+
+Lmod automatically changes the `jellyfish` module to one that was compiled with `intel`.
+
+The module system can also automatically replace or deactivate modules to ensure the packages that are loaded are compatible with each other. For example, switching from `gcc/13.3.0` to `gcc/12.3.0`:
+
+```
+[user@discovery1 ~]$ module load gcc/12.3.0
+
+Inactive Modules:
+  1) openblas/0.3.28     2) openmpi/5.0.5
+
+Due to MODULEPATH changes, the following have been reloaded:
+  1) python/3.11.9
+
+The following have been reloaded with a version change:
+  1) gcc/13.3.0 => gcc/12.3.0
+```
+
+### Module settings
+
+Loading the desired module will make some changes to your shell environment. Some common settings in module files include:
+
+| **Environment variable** | **Description** |
+|---|---|
+| `{NAME}_ROOT`       | Creates variable `{NAME}_ROOT` which points to the root directory of installation |
+| `PATH`              | Adds `{NAME}_ROOT/bin` to executable search path |
+| `MANPATH`           | Adds `{NAME}_ROOT/share/man` to manual search path |
+| `LD_LIBRARY_PATH`   | Adds appropriate library directory to library search path |
+| `PKG_CONFIG_PATH`   | Enables package to be found by `pkg-config`; useful for building other software |
+| `CMAKE_PREFIX_PATH` | Enables package build settings to be found by `cmake`; useful for building other software |
+
+Every module is different; some will have extra environment variables, while others will have fewer.
+
+To see what a module changes, use the `module show` command:
+
+```
+module show <software_name>
+```
+
+This will print the contents of the module file. For example:
+
+```
+[user@discovery1 ~]$ module show gcc
+------------------------------------------------------------------------------------
+   /apps/lmod/modules/compilers/gcc/13.3.0.lua:
+------------------------------------------------------------------------------------
+whatis("Name: gcc")
+whatis("Version: 13.3.0")
+whatis("Target: x86_64")
+whatis("Category: compiler")
+whatis("Keywords: compiler, gcc, g++, gfortran, c, c++, fortran")
+whatis("Short description: GNU Compiler Collection including gcc, g++, and gfortran.")
+whatis("URL: https://gcc.gnu.org/")
+help([[The GNU Compiler Collection includes front ends for C, C++, Objective-C, Fortran, Ada, Go,
+and D, as well as libraries for these languages (libstdc++,...). GCC was originally written
+as the compiler for the GNU operating system. The GNU system was developed to be 100%
+free software, free in the sense that it respects the user's freedom.
+]])
+family("compiler")
+prepend_path("PATH","/apps/generic/gcc/13.3.0/bin")
+prepend_path("LD_LIBRARY_PATH","/apps/generic/gcc/13.3.0/lib64")
+prepend_path("MANPATH","/apps/generic/gcc/13.3.0/share/man")
+prepend_path("CMAKE_PREFIX_PATH","/apps/generic/gcc/13.3.0")
+setenv("CC","/apps/generic/gcc/13.3.0/bin/gcc")
+setenv("CXX","/apps/generic/gcc/13.3.0/bin/g++")
+setenv("FC","/apps/generic/gcc/13.3.0/bin/gfortran")
+setenv("F77","/apps/generic/gcc/13.3.0/bin/gfortran")
+setenv("GCC_ROOT","/apps/generic/gcc/13.3.0")
+prepend_path("MODULEPATH","/apps/spack/2406/apps/lmod/linux-rocky8-x86_64/gcc/13.3.0")
+prepend_path("MODULEPATH","/apps/lmod/modules/gcc/13.3.0")
+```
+
+In this case, loading the GCC module will modify your `PATH` environment variable by prepending it with the path to the GCC binaries. Additionally, it creates a new variable named `GCC_ROOT` that you could then use if needed:
+
+```
+[user@discovery1 ~]$ echo $GCC_ROOT
+/spack/apps/gcc/13.3.0
+```
+
+Every module sets a `<SOFTWARE_NAME>_ROOT` variable, which is a useful shortcut pointing to the root directory of the installation.
+
+### Saving module collections
+
+Another useful feature of Lmod is saving collections of modules for easier loading and unloading.
+
+With a set of desired modules loaded, use `module save` to save them as your default collection:
+
+```
+[user@discovery1 ~]$ module purge
+[user@discovery1 ~]$ module load gcc/13.3.0 r/4.4.2
+[user@discovery1 ~]$ module save
+Saved current collection of modules to: "default"
+```
+
+Then the next time you log in use `module restore` to load your default collection:
+
+```
+[user@discovery1 ~]$ module restore
+Restoring modules from user's default
+```
+
+You can also save multiple collections by specifying a collection name:
+
+```
+[user@discovery1 ~]$ module save mymodules
+Saved current collection of modules to: "mymodules"
+```
+
+Then use the collection name when restoring:
+
+```
+[user@discovery1 ~]$ module restore mymodules
+Restoring modules from user's mymodules
+```
+
+### Additional resources
+
+If you have questions about or need help with software modules, please [submit a help ticket](/user-support/submit-ticket) and we will assist you.
+
+* [Lmod](https://lmod.readthedocs.io/en/latest/)
+* [User Guide for Lmod](https://lmod.readthedocs.io/en/latest/010_user.html)
+* [Advanced User Guide for Personal Modulefiles](https://lmod.readthedocs.io/en/latest/020_advanced.html)
