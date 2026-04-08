@@ -1,7 +1,8 @@
- 
+# Backend.ai Overview
+
 Backend.AI is an open source cloud resource management platform, which makes it easy to utilize virtualized compute resource clusters in a cloud or on-premises environment. The container-based GPU virtualization technology of Backend.AI supports the efficient use of GPUs by flexibly dividing one physical GPU, so that multiple users can use it at the same time.
 
-# Backend.ai Overview
+
 
 ## Accessing the Portal
 To begin using the Backend.ai platform at USC, navigate to the following web address:
