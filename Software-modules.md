@@ -8,6 +8,7 @@ Using a module system like Lmod is helpful because applications and libraries co
 When you log in, we automatically load a module named `usc` for you, which is actually a collection of modules. You can enter the `module list` command to view them:
 
 ```
+work@main1[hYkzzAej-session]:~$ module load usc
 work@main1[hYkzzAej-session]:~$ module list
 
 Currently Loaded Modules:
