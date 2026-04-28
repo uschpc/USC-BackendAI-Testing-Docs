@@ -214,13 +214,13 @@ This ensures that the loaded modules are compatible with one another.
 For example, let's say you want to use the `jellyfish` package compiled with `gcc/13.3.0`. You would load it with:
 
 ```
-work@main1[hYkzzAej-session]:~$  module load gcc/13.3.0 jellyfish
+work@main1[hYkzzAej-session]:~$ module load gcc/13.3.0 jellyfish
 ```
 
 If for some reason you need to switch to the `intel` compiler set, you can use the `module swap` command to swap out the `gcc` compiler:
 
 ```
-work@main1[hYkzzAej-session]:~$  module swap gcc intel
+work@main1[hYkzzAej-session]:~$ module swap gcc intel
 
 Due to MODULEPATH changes, the following have been reloaded:
   1) jellyfish/2.3.0
@@ -231,7 +231,7 @@ Lmod automatically changes the `jellyfish` module to one that was compiled with 
 The module system can also automatically replace or deactivate modules to ensure the packages that are loaded are compatible with each other. For example, switching from `gcc/13.3.0` to `gcc/12.3.0`:
 
 ```
-work@main1[hYkzzAej-session]:~$  module load gcc/12.3.0
+work@main1[hYkzzAej-session]:~$ module load gcc/12.3.0
 
 Inactive Modules:
   1) openblas/0.3.28     2) openmpi/5.0.5
