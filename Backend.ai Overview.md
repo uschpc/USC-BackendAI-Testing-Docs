@@ -4,7 +4,7 @@ Backend.AI is an open source cloud resource management platform, which makes it 
 
 ---
 
-## 🔑 Accessing the Portal & Authentication
+## Accessing the Portal & Authentication
 To begin using the Backend.AI platform at USC, navigate to the following web address:
 
 **Portal URL:** [https://backendai.carc.usc.edu/start](https://backendai.carc.usc.edu/start)
@@ -28,7 +28,7 @@ For all USC users, it is recommended to use the **Single Sign-On (SSO)** method.
 
 ---
 
-## 🚀 The Start Page (Landing Page)
+## The Start Page (Landing Page)
 The **Start Page** is your primary entry point for launching tasks. It features quick-action cards to manage data and compute workloads.
 
 ![Backend AI Start Page](images/start_page.png)
@@ -42,7 +42,7 @@ The **Start Page** is your primary entry point for launching tasks. It features 
 
 ---
 
-## 📂 Navigation & UI
+## Navigation & UI
 The interface is organized into logical functional areas via the sidebar and top bar.
 
 ### Navigation Sidebar
@@ -59,10 +59,10 @@ The interface is organized into logical functional areas via the sidebar and top
 
 ---
 
-## 🏛️ System Info (USC CARC)
+## System Info (USC CARC)
 * **Organization:** USC University of Southern California
 * **Facility:** Center for Advanced Research Computing
 * **Version:** 24.03.7
 
-> ### 💡 Technical Note
+> ### Technical Note
 > If you are unable to reach the login page, please verify that you are connected to the USC network or have the **USC VPN** active, as required by CARC security policies.
