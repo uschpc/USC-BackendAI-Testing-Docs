@@ -62,7 +62,6 @@ The interface is organized into logical functional areas via the sidebar and top
 ## System Info (USC CARC)
 * **Organization:** USC University of Southern California
 * **Facility:** Center for Advanced Research Computing
-* **Version:** 24.03.7
 
 > ### Technical Note
 > If you are unable to reach the login page, please verify that you are connected to the USC network or have the **USC VPN** active, as required by CARC security policies.
