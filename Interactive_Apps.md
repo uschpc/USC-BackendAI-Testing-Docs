@@ -31,7 +31,7 @@ Wait for the Session status to turn green and say "Running".
 In the session list, choose the newly created session.
 Then, in the upper right corner, you will see icons; choose the one with four squares. 
 
-![Session Icons](./images/interactive_apps/session_icons_01.png.png)
+![Session Icons](./images/interactive_apps/session_icons_01.png)
 
 
 A list of available Apps will appear. 
