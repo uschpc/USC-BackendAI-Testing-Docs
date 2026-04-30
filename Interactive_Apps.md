@@ -6,7 +6,7 @@ Unlike a standard Linux shell, Interactive Apps require specific software config
 1. The Launch Dialog
 When you click Sessions or Start, you will see a section labeled "Start" or "Start Sessions"
 
-![Start Session](../images/interactive_apps/launch_dialog_01.png)
+![Start Session](./images/interactive_apps/launch_dialog_01.png)
 
 Choose an "Interactive Session", then an environment of your choice. i.e., Pytorch. 
 You can set environment variables, such as the Hugging Face token HF_TOKEN or others.
@@ -31,16 +31,16 @@ Wait for the Session status to turn green and say "Running".
 In the session list, choose the newly created session.
 Then, in the upper right corner, you will see icons; choose the one with four squares. 
 
-![Session Icons](../images/interactive_apps/session_icons_01.png.png)
+![Session Icons](./images/interactive_apps/session_icons_01.png.png)
 
 
 A list of available Apps will appear. 
 
-![Apps List](../images/interactive_apps/apps_01.png)
+![Apps List](./images/interactive_apps/apps_01.png)
 
 In this example, we will choose JupyterLab. Click on the JupyterLab icon, and you will connect to the JupyterLab App with a kernel already containing PyTorch.
 
-![Apps List](../images/interactive_apps/jupyterlab_01.png)
+![Apps List](./images/interactive_apps/jupyterlab_01.png)
 
 
 
