@@ -30,7 +30,7 @@ The optional **Session name** field accepts 4–64 alphanumeric characters with 
 
 Under **Resource allocation** you choose how much hardware the session gets:
 
-![Resource allocation sliders](images/RUNNING_Jobs/resource_allocation.png)
+<p align="center"><img src="images/RUNNING_Jobs/resource_allocation.png" alt="Resource allocation sliders" width="540"></p>
 
 * **Resource Group** — the pool of host servers your session can run on. Servers in a group typically share the same GPU type. If you have access to more than one group, pick whichever fits your workload.
 * **Resource Presets** — predefined CPU / memory / GPU bundles. Sliders let you fine-tune CPU cores, RAM, shared memory, AI accelerators (GPUs/NPUs), and the number of sessions to launch in parallel.
@@ -40,7 +40,7 @@ Under **Resource allocation** you choose how much hardware the session gets:
 
 > When using a GPU, allocate at least **2× the GPU memory in RAM**. Anything less and the GPU will spend significant time idle waiting for the host.
 
-![HPC optimizations](images/RUNNING_Jobs/hpc_optimization.png)
+<p align="center"><img src="images/RUNNING_Jobs/hpc_optimization.png" alt="HPC optimizations" width="520"></p>
 
 The **High-Performance Computing Optimizations** section exposes the `nthreads-var` control. By default Backend.AI sets it equal to the session's CPU count, which speeds up typical HPC workloads. For multi-process OpenMP workloads that already spawn many threads, lowering this to `1` or `2` avoids oversubscription and the slowdown that comes with it.
 
@@ -70,11 +70,11 @@ Click **Launch**. If you did not mount any folders a warning dialog appears — 
 
 Once the session is **RUNNING**, click its name in the session list to open the **Session Detail Panel**, which shows the session ID, type, environment, mounts, allocated resources, elapsed time, agent, cluster mode, network I/O, and per-kernel info.
 
-![Session detail panel](images/RUNNING_Jobs/session_detail_panel.png)
+<p align="center"><img src="images/RUNNING_Jobs/session_detail_panel.png" alt="Session detail panel" width="600"></p>
 
 The icons in the top-right of the detail panel are how you actually use the session. The first icon opens the **app launcher**:
 
-![App launcher dialog](images/RUNNING_Jobs/app_launcher.png)
+<p align="center"><img src="images/RUNNING_Jobs/app_launcher.png" alt="App launcher dialog" width="380"></p>
 
 Two checkboxes apply to whichever app you open next:
 
@@ -118,7 +118,7 @@ Click **Edit** in the session detail panel to rename. The new name follows the s
 
 ### Idle checks
 
-![Idle checks panel](images/RUNNING_Jobs/idle_checks_panel.png)
+<p align="center"><img src="images/RUNNING_Jobs/idle_checks_panel.png" alt="Idle checks panel" width="480"></p>
 
 Backend.AI can auto-terminate sessions to reclaim resources. Three checkers may be active:
 
@@ -130,7 +130,7 @@ The idle window only looks at the **average** over the last idle timeout, so bri
 
 ### Terminate
 
-![Terminate session dialog](images/RUNNING_Jobs/terminate_session_dialog.png)
+<p align="center"><img src="images/RUNNING_Jobs/terminate_session_dialog.png" alt="Terminate session dialog" width="540"></p>
 
 Click the red power button on the session row and confirm with **Terminate**. Anything outside a mounted folder is gone the moment the session ends, so move/copy what you need first.
 
@@ -138,19 +138,19 @@ Click the red power button on the session row and confirm with **Terminate**. An
 
 ### Adding environment variables
 
-![Environment variables UI](images/RUNNING_Jobs/environment_variables.png)
+<p align="center"><img src="images/RUNNING_Jobs/environment_variables.png" alt="Environment variables UI" width="640"></p>
 
 On the **Environments** step, click **+ Add environment variables** and fill in the name/value pair (one row per variable). Use the **−** button to remove a row. Variables are exported into the shell of every kernel in the session.
 
 ### Adding preopen ports
 
-![Preopen ports configuration](images/RUNNING_Jobs/preopen_ports.png)
+<p align="center"><img src="images/RUNNING_Jobs/preopen_ports.png" alt="Preopen ports configuration" width="640"></p>
 
 On the **Network** step, type one or more port numbers between **1024 and 65535**, separated by commas or spaces, then press **Enter**. The configured ports show up later in the app launcher. Note that these are the **internal container ports** — clicking them in the app launcher opens a blank page until you actually bind a server to that port inside the container.
 
 ### Convert a session to an image (commit)
 
-![Commit session to a customized image](images/RUNNING_Jobs/commit_session_to_image.png)
+<p align="center"><img src="images/RUNNING_Jobs/commit_session_to_image.png" alt="Commit session to a customized image" width="560"></p>
 
 The **Commit** icon (fourth icon in the detail panel) saves the current state of a **RUNNING** interactive session as a new image. Enter an image name (4–32 chars, alphanumeric / `-` / `_`) and click **PUSH SESSION TO CUSTOMIZED IMAGE**. The new image shows up as `Customized<session name>` in the environment list when you launch future sessions, and is private to you.
 
