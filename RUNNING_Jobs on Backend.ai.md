@@ -76,11 +76,6 @@ The icons in the top-right of the detail panel are how you actually use the sess
 
 <p align="center"><img src="images/RUNNING_Jobs/app_launcher.png" alt="App launcher dialog" width="380"></p>
 
-Two checkboxes apply to whichever app you open next:
-
-* **Open app to public** — by default web apps (Terminal, Jupyter, etc.) require your authentication. Check this and anyone with the URL and port can access it.
-* **Try preferred port** — without this, Backend.AI assigns a random port from its pool. With it, Backend.AI tries the port you enter first and falls back to a random one if that port is unavailable.
-
 ### Jupyter Notebook
 
 ![Jupyter notebook running in a session](images/RUNNING_Jobs/jupyter_notebook.png)
