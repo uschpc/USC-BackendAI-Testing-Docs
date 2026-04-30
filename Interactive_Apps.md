@@ -1,10 +1,12 @@
 In Backend.ai, an Interactive App is a web-based interface, such as JupyterLab, Visual Studio Code, or RStudio, that runs inside your interactive compute session and is securely exposed to your browser. It transforms a raw container into a familiar, productive workspace.
 
-Phase 1: Launching Interactive Apps
+## Phase 1: Launching Interactive Apps
 Unlike a standard Linux shell, Interactive Apps require specific software configurations. Backend.ai simplifies this by bundling them into "Environments" and "Images" or allowing you to add them dynamically.
 
 1. The Launch Dialog
 When you click Sessions or Start, you will see a section labeled "Start" or "Start Sessions"
+
+![Start Session](../images/interactive_apps/launch_dialog_01.png)
 
 Choose an "Interactive Session", then an environment of your choice. i.e., Pytorch. 
 You can set environment variables, such as the Hugging Face token HF_TOKEN or others.
@@ -21,16 +23,29 @@ The Proxy: You never connect directly to the Agent node. You connect to the Back
 
 3. Click Start.
 
-Phase 2: Accessing & Authentication
+## Phase 2: Accessing & Authentication
 Connecting to an interactive app is different from connecting to a terminal. It requires secure authentication tokens to prevent unauthorized access to your data.
 
 1. The Launch Process
 Wait for the Session status to turn green and say "Running".
 In the session list, choose the newly created session.
-Then, in the upper right corner, you will see icons; choose the one with four squares. A list of available Apps will appear. In this example, we will choose JupyterLab. Click on the JupyterLab icon, and you will connect to the JupyterLab App with a kernel already containing PyTorch.
+Then, in the upper right corner, you will see icons; choose the one with four squares. 
+
+![Session Icons](../images/interactive_apps/session_icons_01.png.png)
 
 
-Phase 3. The Workflow
+A list of available Apps will appear. 
+
+![Apps List](../images/interactive_apps/apps_01.png)
+
+In this example, we will choose JupyterLab. Click on the JupyterLab icon, and you will connect to the JupyterLab App with a kernel already containing PyTorch.
+
+![Apps List](../images/interactive_apps/jupyterlab_01.png)
+
+
+
+
+## Phase 3. The Workflow
 
 1. The Filesystem Hierarchy
 When you open Jupyter, you are looking at the file system of the Session Container.
@@ -59,7 +74,7 @@ To get a file from the App to your laptop:
 Download: Use the App's "Download" button (in Jupyter file explorer).
 Clone: Use Git to push code to a remote repository (GitHub/GitLab) from within the App terminal.
 
-Phase 4: App Lifecycle vs. Session Lifecycle
+## Phase 4: App Lifecycle vs. Session Lifecycle
 It is vital to understand the relationship between the App and the Session.
 
 1. Stopping the App
@@ -109,4 +124,4 @@ Resource Check: Did I accidentally leave a GPU-intensive session running while s
 Summary
 Interactive Apps on Backend.ai bridge the gap between powerful cloud infrastructure and your daily workflow. By mastering the distinction between the Session (the hardware state) and the App (the interface), you gain the ability to develop securely, save persistently, and scale efficiently.
 
-Remember: The Desk (App) is temporary. The Office (VFolder) is forever. Save wisely.
+## Remember: Your App is temporary. The storage lasts between sessions. Save wisely.
