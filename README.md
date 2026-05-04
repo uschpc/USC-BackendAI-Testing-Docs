@@ -5,7 +5,7 @@ Hao: Backend.ai Overview & Software modules
 
 Cesar + Tomek: Data Management
 
-Tomek: Interactive Apps （Merged）
+Tomek: Interactive Apps（Merged）
 
 Iman + Tomek + Derek: Interactive sesssions on Backend.ai
 
