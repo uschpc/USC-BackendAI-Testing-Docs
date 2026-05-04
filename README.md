@@ -3,10 +3,10 @@ This is a documentation related to how to use backend.ai
 
 Hao: Backend.ai Overview & Software modules
 
-Cesar: Data Management
+Cesar + Tomek: Data Management
 
-Tomek: Interactive Apps
+Tomek: Interactive Apps （Merged）
 
-Iman: Running jobs on Backend.ai
+Iman + Tomek + Derek: Interactive sesssions on Backend.ai
 
-Derek: Shell Access
+Derek: Shell Access (Merged)
