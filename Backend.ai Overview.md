@@ -83,10 +83,7 @@ The interface is organized into logical functional areas via the sidebar and top
 - **Serving:** Deploy and manage model inference endpoints.
 - **Model Store:** Browse and publish reusable trained models.
 - **Chat (Playground):** Interface for LLM interaction and experimental tools.
-- **Import & Run:** Launch sessions directly from a Git repository or notebook URL.
 - **My Environments:** Manage your custom container images.
-- **Statistics:** Historical resource usage data.
-- **Agent Summary:** Visibility into agent node health.
 
 ### Top Bar Features
 - **Project Selector:** Toggle between different projects (e.g., "default") to manage quotas. A user can belong to multiple projects within a domain.
