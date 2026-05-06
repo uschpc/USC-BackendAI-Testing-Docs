@@ -19,16 +19,14 @@ Backend.AI natively supports multi-container cluster sessions for distributed co
 
 If a multi-node request can fit on a single agent, Backend.AI consolidates it automatically to minimize network latency. This is ideal for frameworks like PyTorch DDP, TensorFlow MultiWorker, Horovod, and MLflow.
 
-### 3. Polycloud and Hybrid Cloud Scaling
-Backend.AI supports on-premise (bare-metal or VM), hybrid cloud, and **polycloud** (multi-cloud federation) deployments. This means a single Backend.AI installation can schedule workloads across an on-prem cluster and burst into AWS, Azure, or GCP when needed.
 
-### 4. Multiple Session Types Tailored to AI Workflows
+### 3. Multiple Session Types Tailored to AI Workflows
 Rather than one-size-fits-all jobs, Backend.AI offers three workload types:
 - **Interactive sessions** — Jupyter, VS Code, R Studio, Terminal, MLflow, TensorBoard, Microsoft NNI for live experimentation.
 - **Batch sessions** — Queued long-running jobs such as full training runs.
 - **Inference / Model Serving** — Deploy trained models as autoscaling API endpoints.
 
-### 5. Storage Integration and Virtual Folders
+### 4. Storage Integration and Virtual Folders
 Backend.AI integrates with different file systems. Users interact with these through **Virtual Folders (vFolders)** — cloud folders that auto-mount into any container regardless of which node it runs on, with fine-grained sharing and per-user/project quotas.
 
 ---
