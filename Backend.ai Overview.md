@@ -69,18 +69,6 @@ The **Start Page** is your primary entry point for launching tasks. It features 
 - **Start From URL:** Import projects directly from GitHub, GitLab, or remote notebooks.
 - **Start Model Service:** Deploy trained models as API endpoints for inference, with autoscaling.
 
-### Cluster Compute Sessions (Advanced)
-When launching a session, you can also create a **cluster session** for distributed training:
-
-1. In the session creation dialog, set the resources per container (e.g., 4 CPUs allocates 4 cores to *each* container).
-2. Choose **Cluster mode**: `Single Node` or `Multi Node`.
-3. Set **Cluster size** (e.g., 3 creates one `main1` plus two `sub` containers).
-4. Mount your data vFolder and click **LAUNCH**.
-
-Each container is given environment variables like `BACKENDAI_CLUSTER_HOST`, `BACKENDAI_CLUSTER_HOSTS`, `BACKENDAI_CLUSTER_ROLE`, and `BACKENDAI_CLUSTER_SIZE` so your distributed training script can discover its peers automatically.
-
-> **Tip:** Total resources required = (per-container resources) × (cluster size). Sessions stay in `PENDING` if the cluster doesn't have enough free capacity.
-
 ---
 
 ## Navigation & UI
