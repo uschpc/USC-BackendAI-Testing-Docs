@@ -112,7 +112,6 @@ The interface is organized into logical functional areas via the sidebar and top
 
 - **Organization:** USC University of Southern California
 - **Facility:** Center for Advanced Research Computing
-- **Backend.AI WebUI Version:** 25.15 (latest stable, as of 2026)
 
 > ### Technical Note
 > If you are unable to reach the login page, please verify that you are connected to the USC network or have the **USC VPN** active, as required by CARC security policies.
