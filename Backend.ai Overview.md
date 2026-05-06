@@ -81,9 +81,10 @@ The interface is organized into logical functional areas via the sidebar and top
 - **Data (Storage):** Interface for managing virtual folders, sharing, and quotas.
 - **Sessions (Workload):** Monitor running tasks, view per-container logs, and access running apps.
 - **My Environments:** Manage your custom container images.
+- **Chat (Playground):** Interface for LLM interaction and experimental tools.
 - **Serving:** Deploy and manage model inference endpoints.
 - **Model Store:** Browse and publish reusable trained models.
-- **Chat (Playground):** Interface for LLM interaction and experimental tools.
+
 
 
 ### Top Bar Features
