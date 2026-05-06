@@ -29,21 +29,7 @@ Rather than one-size-fits-all jobs, Backend.AI offers three workload types:
 ### 4. Storage Integration and Virtual Folders
 Backend.AI integrates with different file systems. Users interact with these through **Virtual Folders (vFolders)** — cloud folders that auto-mount into any container regardless of which node it runs on, with fine-grained sharing and per-user/project quotas.
 
----
 
-## Recent Feature Highlights
-
-Backend.AI has been evolving rapidly. Recent releases (24.03 and later, current docs at 25.15) include:
-
-- **Per-container logs in cluster sessions** (24.03+): The logs modal now shows logs separately for `main` and each `sub` container, making distributed debugging much easier.
-- **Model Store and Model Serving page**: Centralized place to publish, version, and deploy models as inference endpoints.
-- **Chat Page (Playground)**: Built-in interface for interacting with LLMs and experimental tools directly inside the platform.
-- **Start Page**: Redesigned quick-action launcher that consolidates the most common workflows (folder creation, interactive/batch sessions, importing from Git, model serving).
-- **Import & Run from URL**: Launch sessions directly from GitHub, GitLab, or remote notebooks without manually uploading code.
-- **My Environments**: Users can register and manage their own custom container images alongside admin-provided ones.
-- **GPUDirect Storage and NGC image integration** for NVIDIA workloads, plus automatic GPU-GPU network configuration.
-
----
 
 ## Accessing the Portal & Authentication
 
