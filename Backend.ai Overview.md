@@ -8,33 +8,28 @@ Backend.AI is an open source cloud resource management platform that makes it ea
 
 Backend.AI stands apart from generic container or Kubernetes-based platforms because it is purpose-built for AI/ML and HPC workloads. Below are the capabilities that distinguish it.
 
-### 1. Fractional GPU Virtualization (Enterprise)
+### 1. Fractional GPU Virtualization 
 Most platforms allocate GPUs as whole units, which wastes capacity for users who only need a slice. Backend.AI's GPU virtualization plug-in lets a single physical NVIDIA GPU be split among multiple containers — with isolated memory and compute shares — so a lab can fit many concurrent users on the same hardware without contention. This is one of the platform's signature features and a major reason organizations choose it over plain Kubernetes.
 
-### 2. Broad Multi-Vendor Accelerator Support
-Backend.AI is one of the few platforms that natively supports a wide range of AI accelerators beyond NVIDIA, including AMD (MI250X+), Intel Gaudi 2/3, Graphcore IPU, Groq, Furiosa Warboy/RNGD, Rebellions ATOM, SambaNova SN30/40L, Sapeon X220/X330, Tenstorrent Wormhole, and HyperAccel. This makes it a future-proof choice for heterogeneous research environments.
 
-### 3. Cluster Compute Sessions for Distributed Training
+### 2. Cluster Compute Sessions for Distributed Training
 Backend.AI natively supports multi-container cluster sessions for distributed computing and training. Containers in a cluster session are automatically wired together over a private network, with auto-generated SSH keys, predictable hostnames (`main1`, `sub1`, `sub2`, ...), and zero manual configuration. Users can simply `ssh sub1` from the main container — no key exchange, no firewall rules. Two modes are available:
 - **Single Node:** All containers on one agent node (uses a local bridge network).
 - **Multi Node:** Containers spread across multiple agents (uses an overlay network).
 
 If a multi-node request can fit on a single agent, Backend.AI consolidates it automatically to minimize network latency. This is ideal for frameworks like PyTorch DDP, TensorFlow MultiWorker, Horovod, and MLflow.
 
-### 4. Polycloud and Hybrid Cloud Scaling
+### 3. Polycloud and Hybrid Cloud Scaling
 Backend.AI supports on-premise (bare-metal or VM), hybrid cloud, and **polycloud** (multi-cloud federation) deployments. This means a single Backend.AI installation can schedule workloads across an on-prem cluster and burst into AWS, Azure, or GCP when needed.
 
-### 5. Multiple Session Types Tailored to AI Workflows
+### 4. Multiple Session Types Tailored to AI Workflows
 Rather than one-size-fits-all jobs, Backend.AI offers three workload types:
 - **Interactive sessions** — Jupyter, VS Code, R Studio, Terminal, MLflow, TensorBoard, Microsoft NNI for live experimentation.
 - **Batch sessions** — Queued long-running jobs such as full training runs.
 - **Inference / Model Serving** — Deploy trained models as autoscaling API endpoints.
 
-### 6. Fine-Grained Resource Policy and Multi-Tenancy
-Resource policies can be applied per-user, per-keypair, per-project, and per-domain. Enterprise editions add utilization-based resource management and access control of users/projects to specific resource groups, which is essential for shared university clusters like USC CARC.
-
-### 7. Storage Integration and Virtual Folders
-Backend.AI integrates with EFS, NFS, SMB, and distributed file systems (CephFS, GlusterFS, HDFS) and enterprise storage from Dell PowerScale, IBM SpectrumScale, NetApp, PureStorage, and WEKA. Users interact with these through **Virtual Folders (vFolders)** — cloud folders that auto-mount into any container regardless of which node it runs on, with fine-grained sharing and per-user/project quotas.
+### 5. Storage Integration and Virtual Folders
+Backend.AI integrates with different file systems. Users interact with these through **Virtual Folders (vFolders)** — cloud folders that auto-mount into any container regardless of which node it runs on, with fine-grained sharing and per-user/project quotas.
 
 ---
 
