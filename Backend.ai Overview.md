@@ -80,10 +80,11 @@ The interface is organized into logical functional areas via the sidebar and top
 - **Dashboard:** High-level overview of resource usage and active session counts.
 - **Data (Storage):** Interface for managing virtual folders, sharing, and quotas.
 - **Sessions (Workload):** Monitor running tasks, view per-container logs, and access running apps.
+- **My Environments:** Manage your custom container images.
 - **Serving:** Deploy and manage model inference endpoints.
 - **Model Store:** Browse and publish reusable trained models.
 - **Chat (Playground):** Interface for LLM interaction and experimental tools.
-- **My Environments:** Manage your custom container images.
+
 
 ### Top Bar Features
 - **Project Selector:** Toggle between different projects (e.g., "default") to manage quotas. A user can belong to multiple projects within a domain.
