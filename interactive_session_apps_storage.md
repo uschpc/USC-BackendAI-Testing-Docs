@@ -3,7 +3,7 @@ In Backend.ai, an Interactive App is a web-based interface, such as JupyterLab, 
 ## Phase 1: Launching Interactive Apps
 Unlike a standard Linux shell, Interactive Apps require specific software configurations. Backend.ai simplifies this by bundling them into "Environments" and "Images" or allowing you to add them dynamically.
 
-1. The Launch Dialog
+#### 1. The Launch Dialog
 When you click Sessions or Start, you will see a section labeled "Start" or "Start Sessions"
 
 <img src="images/interactive_apps/launch_dialog_01.png" alt="image" style="width:600px;height:auto;">
@@ -15,40 +15,51 @@ Then, in the "Resource Allocation" group, choose a GPU resource group and the si
 
 Then you can set a persistent storage location. It is a good place to store your models or data. You can set mountpoints in your home directory (/home/work)
 
-2. Port Configuration
+#### 2. Port Configuration
 Backend.ai handles the networking for you, but understanding the flow helps:
 
 Internal Port: The App runs on a specific port inside the container (e.g., Jupyter on 8888).
 External Port: Backend.ai assigns a random secure port on the proxy server for you to access it from the outside.
 The Proxy: You never connect directly to the Agent node. You connect to the Backend.ai Proxy, which forwards your traffic securely.
 
-3. Click Start.
+#### 3. Click Start.
 
 ## Phase 2: Accessing & Authentication
 Connecting to an interactive app is different from connecting to a terminal. It requires secure authentication tokens to prevent unauthorized access to your data.
 
-1. The Launch Process
+#### 1. The Launch Process
 Wait for the Session status to turn green and say "Running".
 In the session list, choose the newly created session.
-Then, in the upper right corner, you will see icons; choose the one with four squares. 
+Then, in the upper right corner, you will see icons. 
 
 ![Session Icons](./images/interactive_apps/session_icons_01.png)
 
+#### 2. To start a Terminal App, click **`>_`** icon, and a new browser tab will open with the terminal interface.
 
-A list of available Apps will appear. 
+Within the terminal app:
 
-![Apps List](./images/interactive_apps/apps_01.png)
+- You will see a shell prompt (e.g., `work@main1[gDz6uH2p-session]:~$`).
+- You can:
+  - Run Linux shell commands (`ls`, `cd`, `python`, etc.)
+  - Create and manage files
+  - Install software
+
+Closing the terminal browser tab does not stop the command that is running or the compute session.
+
+
+
+#### 3. To start an interactive app, click an icon with four squares. A list of available Apps will appear. 
+
+<img src="images/interactive_apps/apps_01.png" alt="image" style="width:300px;height:auto;">
 
 In this example, we will choose JupyterLab. Click on the JupyterLab icon, and you will connect to the JupyterLab App with a kernel already containing PyTorch.
 
-![Apps List](./images/interactive_apps/jupyterlab_01.png)
-
-
+<img src="images/interactive_apps/jupyterlab_01.png" alt="image" style="width:500px;height:auto;">
 
 
 ## Phase 3. The Workflow
 
-1. The Filesystem Hierarchy
+####1. The Filesystem Hierarchy
 There are multiple places to store data on the Topanga system and can be categorized into 3 locations kinds:
 
 * Session Specific
@@ -114,7 +125,7 @@ It can use up to 1TB and you can create several directories as long as the total
 Rule: This is your Save Location.
 Use for: Code repositories, datasets, trained models (model.h5, checkpoint.pt).
 
-2. Workflow: Saving Data Correctly
+### 2. Workflow: Saving Data Correctly
 In JupyterLab:
 
 Navigate: In the file explorer panel, click your-project-name (e.g., cache, storage).
