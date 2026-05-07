@@ -22,7 +22,7 @@ If a multi-node request can fit on a single agent, Backend.AI consolidates it au
 
 ### 3. Multiple Session Types Tailored to AI Workflows
 Rather than one-size-fits-all jobs, Backend.AI offers three workload types:
-- **Interactive sessions** — Jupyter, VS Code, R Studio, Terminal, MLflow, TensorBoard, Microsoft NNI for live experimentation.
+- **Interactive sessions** — Jupyter, VS Code, Terminal for live experimentation.
 - **Batch sessions** — Queued long-running jobs such as full training runs.
 - **Inference / Model Serving** — Deploy trained models as autoscaling API endpoints.
 
