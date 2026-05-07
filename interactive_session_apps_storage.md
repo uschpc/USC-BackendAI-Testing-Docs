@@ -6,7 +6,8 @@ Unlike a standard Linux shell, Interactive Apps require specific software config
 1. The Launch Dialog
 When you click Sessions or Start, you will see a section labeled "Start" or "Start Sessions"
 
-![Start Session](./images/interactive_apps/launch_dialog_01.png)
+<img src="images/interactive_apps/launch_dialog_01.png" alt="image" style="width:600px;height:auto;">
+
 
 Choose an "Interactive Session", then an environment of your choice. i.e., Pytorch. 
 You can set environment variables, such as the Hugging Face token HF_TOKEN or others.
@@ -48,21 +49,75 @@ In this example, we will choose JupyterLab. Click on the JupyterLab icon, and yo
 ## Phase 3. The Workflow
 
 1. The Filesystem Hierarchy
+There are multiple places to store data on the Topanga system and can be categorized into 3 locations kinds:
+
+* Session Specific
+* Topanga Filesystem
+* HPC Cluster filesystem
+
+#### Session Specific Data
+
+| Path | Max Disk Capacity|
+|---|---|
+|`/home/work`|?? GB|
+
+The "home" directory for every session is located at `/home/work`. Data here is temporarily stored on the Topanga filesystem and will be deleted when the session ends. **Do not store important or long-term data here.**
+
+#### Topanga Persistent Storage
+| Path | Max Disk Capacity|
+|---|---|
+| e.g. `/home/work/storage`|1 TB|
+
+For data storage that will be persistent across multiple sessions, create a *storage folder*. Cost is based on active storage so use when you need to temporarily store data between sessions. For longer term data storage, it may be more cost efficent to use the /project2 or /scratch1 [filesystems](#hpc-cluster-filesystem).
+
+Because of limited capacity please keep usage **reasonable and proportional**. Users may be subject to **cleanup requests or per-user quotas**.
+
+
+#### Creating a storage folder
+To create a storage folder using the backend.ai interface. 
+
+
+<img src="images/create_new_storage_folder.png" alt="image" style="width:500px;height:auto;">
+
+The **Folder name** will determine the system path that the directory will be available at in each session.
+
+**Usage Mode** refers to ....!
+
+
+#### Mounting a storage folder
+The storage folder can be mounted during the session creation process. 
+
+<img src="images/add_storage_folder_to_session.png" alt="image" style="width:800px;height:auto;">
+
+Under the 'Data & Storage' section, folders selected will be available during the session.
+#### HPC Cluster Filesystem
+| Path | Max Disk Capacity|
+|---|---|
+|`/home/$USER`|100 GB|
+|`/project2/$PI_NAME_PROJECT_ID`|Quota dependent; 15TB free of charge|
+|`/scratch2/$USER`|10 TB |
+
+These system may offer:
+* Larger capacity
+* Project-level data sharing
+
+
 When you open Jupyter, you are looking at the file system of the Session Container.
 
 /home/work is not persistent:
 What is it? Your desktop environment's default folder.
 Rule: Treat this like a scratchpad. Any file saved here vanishes when you destroy the session.
 Use for: Cache files, temporary downloads, logs.
-/home/work/cache (Persistent; assuming you created and mounted a storage there during session creation):
+Topanga Persistent Storage: e.g. /home/work/storage (a directorfy you created and mounted during session creation):
 What is it? Your virtual hard drive mounted from the cloud storage.
+It can use up to 1TB and you can create several directories as long as the total size fits within 1TB.
 Rule: This is your Save Location.
 Use for: Code repositories, datasets, trained models (model.h5, checkpoint.pt).
 
 2. Workflow: Saving Data Correctly
 In JupyterLab:
 
-Navigate: In the file explorer panel, click your-project-name (e.g., cache).
+Navigate: In the file explorer panel, click your-project-name (e.g., cache, storage).
 Create: Create a new notebook or script here.
 Run: Execute your code.
 Verify: Refresh the file browser in the App. Ensure the file is visible inside /home/work.
@@ -90,7 +145,7 @@ App Access: Apps become inaccessible until you resume the session.
 3. Destroying the Session
 Action: Clicking "Destroy" in the Session dashboard.
 Result: The container is deleted. All running Apps are terminated.
-Data: Files in /home/work are lost. Files in /mnt/vfolders are safe.
+Data: Files in /home/work are lost. Files in /home/work/storage are safe.
 
 Cost Saving Tip: If you leave work for the day, Pause the session. Do not just close the Jupyter tab. Closing the tab saves the App connection, but the server keeps billing you for the GPU. Pause the session to freeze costs while keeping your state.
 
@@ -117,7 +172,7 @@ Good: Two people launching separate Sessions, both mounting the same VFolder. Ba
 Checklist: Before You Close the App
 When you are finished for the day, run through this mental checklist:
 
-Data Check: Did I save my notebook to /mnt/vfolders?
+Data Check: Did I save my notebook to /home/work/storage?
 Connection Check: Did I Pause the session, or did I just close the browser tab? (Pause to save money/state).
 Security Check: Did I clear my terminal history? (Run history -c or check .bash_history).
 Resource Check: Did I accidentally leave a GPU-intensive session running while sleeping?
