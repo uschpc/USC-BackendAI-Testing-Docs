@@ -4,9 +4,9 @@ Topanga is the project name for USC CARC's Backend.AI cloud application deployme
 
 ---
 
-## What Makes Backend.AI Special
+## What Makes Topanga Special
 
-Backend.AI stands apart from generic container or Kubernetes-based platforms because it is purpose-built for AI/ML and HPC workloads. Below are the capabilities that distinguish it.
+Topanga stands apart from generic container or Kubernetes-based platforms because it is purpose-built for AI/ML and HPC workloads. Below are the capabilities that distinguish it.
 
 ### 1. Fractional GPU Virtualization 
 Most platforms allocate GPUs as whole units, which wastes capacity for users who only need a slice. Backend.AI's GPU virtualization plug-in lets a single physical NVIDIA GPU be split among multiple containers — with isolated memory and compute shares — so a lab can fit many concurrent users on the same hardware without contention. This is one of the platform's signature features and a major reason organizations choose it over plain Kubernetes.
