@@ -1,6 +1,6 @@
 # Backend.AI Overview
 
-Backend.AI is an open source cloud resource management platform that makes it easy to utilize virtualized compute resource clusters in cloud or on-premises environments. Its container-based GPU virtualization technology supports the efficient use of GPUs by flexibly dividing one physical GPU so multiple users can use it at the same time. Beyond raw GPU sharing, Backend.AI offers a full-stack platform for AI/ML workloads — covering interactive development, distributed training, and model serving — with management features tailored for researchers, administrators, and DevOps teams.
+Topanga is the project name for USC CARC's Backend.AI cloud application deployment. Backend.AI is an open source cloud resource management platform that makes it easy to utilize virtualized compute resource clusters in cloud or on-premises environments. Its container-based GPU virtualization technology supports the efficient use of GPUs by flexibly dividing one physical GPU so multiple users can use it at the same time. Beyond raw GPU sharing, Backend.AI offers a full-stack platform for AI/ML workloads — covering interactive development, distributed training, and model serving — with management features tailored for researchers, administrators, and DevOps teams.
 
 ---
 
@@ -38,7 +38,7 @@ To begin using the Backend.AI platform at USC, navigate to the following web add
 **Portal URL:** [https://topanga.carc.usc.edu](https://topanga.carc.usc.edu)
 
 ### Logging in with USC Credentials
-For all USC users, it is recommended to use the **Single Sign-On (SSO)** method. This ensures you are authenticated through the university's secure system.
+Before logging in, make sure you are connected to the **USC VPN**. Several ports required by Topanga are only accessible on the USC VPN network, so the portal will not load properly without an active VPN connection. For all USC users, it is recommended to use the **Single Sign-On (SSO)** method. This ensures you are authenticated through the university's secure system.
 
 1. **Visit the Start Page**
    Go to [https://topanga.carc.usc.edu](https://topanga.carc.usc.edu).
@@ -49,14 +49,14 @@ For all USC users, it is recommended to use the **Single Sign-On (SSO)** method.
    You will be redirected to the standard USC sign-in page. Enter your **USC NetID** and password, and complete the **Duo 2FA** prompt if requested.
 
 3. **Redirection**
-   Once verified, you will be automatically directed to topanga login page. Click on the button with 'Login with USC' and you will be directed to the start page.
+   Once verified, you will be automatically directed to the **Dashboard**, which is the Start Page of the Topanga portal.
 
    ![Topanga Login Interface](images/topanga.png)
 
 
 
-5. **When you Log out**
-   When you log out and log back in, instead of using the standard email/password fields, click the link labeled **LOGIN WITH USC** at the bottom of the card.
+4. **When you Log out**
+   When you log out, you will be returned to the **Topanga login page** (we have replaced the default Backend.AI login page with the Topanga login page). To log back into the Dashboard, click the **LOGIN WITH USC** button on the login card rather than using the standard email/password fields.
 
    ![Backend AI Login Interface](images/login.png)
 
