@@ -17,7 +17,7 @@ Topanga natively supports multi-container cluster sessions for distributed compu
 - **Single Node:** All containers on one agent node (uses a local bridge network).
 - **Multi Node:** Containers spread across multiple agents (uses an overlay network).
 
-If a multi-node request can fit on a single agent, Backend.AI consolidates it automatically to minimize network latency. This is ideal for frameworks like PyTorch DDP, TensorFlow MultiWorker, Horovod, and MLflow.
+If a multi-node request can fit on a single agent, Topanga consolidates it automatically to minimize network latency. This is ideal for frameworks like PyTorch DDP, TensorFlow MultiWorker, Horovod, and MLflow.
 
 
 ### 3. Multiple Session Types Tailored to AI Workflows
