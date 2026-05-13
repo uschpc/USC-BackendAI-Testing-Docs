@@ -56,7 +56,7 @@ Before logging in, make sure you are connected to the **USC VPN**. Several ports
 
 
 4. **When you Log out**
-   When you log out, you will be returned to the **Topanga login page** . To log back into the Dashboard, click the **Login With USC** button on the login card rather than using the standard email/password fields.
+   When you log out, you will be returned to the **Topanga login page** . To log back into the Dashboard, click the **Login with USC** button on the login card rather than using the standard email/password fields.
 
    ![Topanga Login Interface](images/topanga.png)
 
