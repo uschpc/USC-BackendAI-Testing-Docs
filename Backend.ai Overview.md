@@ -49,7 +49,7 @@ For all USC users, it is recommended to use the **Single Sign-On (SSO)** method.
    You will be redirected to the standard USC sign-in page. Enter your **USC NetID** and password, and complete the **Duo 2FA** prompt if requested.
 
 3. **Redirection**
-   Once verified, you will be automatically directed to topanga login page. Click on the button with 'Login with USC' and you will be directed to the dashboard page.
+   Once verified, you will be automatically directed to topanga login page. Click on the button with 'Login with USC' and you will be directed to the start page.
 
    ![Topanga Login Interface](images/topanga.png)
 
