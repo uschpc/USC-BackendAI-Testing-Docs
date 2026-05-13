@@ -41,7 +41,7 @@ To begin using the Backend.AI platform at USC, navigate to the following web add
 For all USC users, it is recommended to use the **Single Sign-On (SSO)** method. This ensures you are authenticated through the university's secure system.
 
 1. **Visit the Start Page**
-   Go to [backendai.carc.usc.edu/start](https://topanga.carc.usc.edu).
+   Go to [https://topanga.carc.usc.edu](https://topanga.carc.usc.edu).
 
 2. **Select the USC Login Option**
    Instead of using the standard email/password fields, click the link labeled **LOGIN WITH USC** at the bottom of the card.
