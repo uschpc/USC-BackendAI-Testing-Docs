@@ -104,7 +104,7 @@ The interface is organized into logical functional areas via the sidebar and top
 
 | Concept | Meaning |
 |---|---|
-| **User** | A person logged into Backend.AI. Roles: normal user, domain admin, superadmin. |
+| **User** | A person logged into Topanga Roles: normal user, domain admin, superadmin. |
 | **Domain** | Top-level authority and resource boundary (e.g., an organization or affiliate). |
 | **Project** | A working unit inside a domain. Users can belong to multiple projects. |
 | **Compute Session** | An isolated container with full root-like rights inside it; invisible to other users. |
