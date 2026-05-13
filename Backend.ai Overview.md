@@ -13,7 +13,7 @@ Most platforms allocate GPUs as whole units, which wastes capacity for users who
 
 
 ### 2. Cluster Compute Sessions for Distributed Training
-Backend.AI natively supports multi-container cluster sessions for distributed computing and training. Containers in a cluster session are automatically wired together over a private network, with auto-generated SSH keys, predictable hostnames (`main1`, `sub1`, `sub2`, ...), and zero manual configuration. Users can simply `ssh sub1` from the main container — no key exchange, no firewall rules. Two modes are available:
+Topanga natively supports multi-container cluster sessions for distributed computing and training. Containers in a cluster session are automatically wired together over a private network, with auto-generated SSH keys, predictable hostnames (`main1`, `sub1`, `sub2`, ...), and zero manual configuration. Users can simply `ssh sub1` from the main container — no key exchange, no firewall rules. Two modes are available:
 - **Single Node:** All containers on one agent node (uses a local bridge network).
 - **Multi Node:** Containers spread across multiple agents (uses an overlay network).
 
@@ -27,7 +27,7 @@ Rather than one-size-fits-all jobs, Backend.AI offers three workload types:
 - **Inference / Model Serving** — Deploy trained models as autoscaling API endpoints.
 
 ### 4. Storage Integration and Virtual Folders
-Backend.AI integrates with different file systems. Users interact with these through **Virtual Folders (vFolders)** — cloud folders that auto-mount into any container regardless of which node it runs on, with fine-grained sharing and per-user/project quotas.
+Topanga integrates with different file systems. Users interact with these through **Virtual Folders (vFolders)** — cloud folders that auto-mount into any container regardless of which node it runs on, with fine-grained sharing and per-user/project quotas.
 
 
 
