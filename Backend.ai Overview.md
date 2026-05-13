@@ -38,7 +38,7 @@ To begin using the Topanga platform at USC, navigate to the following web addres
 **Portal URL:** [https://topanga.carc.usc.edu](https://topanga.carc.usc.edu)
 
 ### Logging in with USC Credentials
-Before logging in, make sure you are connected to the **USC VPN**. Several ports required by Topanga are only accessible on the USC VPN network, so the portal will not load properly without an active VPN connection. For all USC users, it is recommended to use the **Single Sign-On (SSO)** method. This ensures you are authenticated through the university's secure system.
+Before logging in, make sure you are connected to the **USC VPN**. Several ports required by Topanga are only accessible on the USC VPN network, so the portal will not load properly without an active VPN connection. For all USC users, please use the **Single Sign-On (SSO)** method. This ensures you are authenticated through the university's secure system.
 
 1. **Visit the Start Page**
    Go to [https://topanga.carc.usc.edu](https://topanga.carc.usc.edu).
