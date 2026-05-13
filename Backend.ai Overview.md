@@ -43,16 +43,18 @@ For all USC users, it is recommended to use the **Single Sign-On (SSO)** method.
 1. **Visit the Start Page**
    Go to [https://topanga.carc.usc.edu](https://topanga.carc.usc.edu).
 
-2. **Select the USC Login Option**
-   Instead of using the standard email/password fields, click the link labeled **LOGIN WITH USC** at the bottom of the card.
 
-   ![Backend AI Login Interface](images/login.png)
 
-3. **USC Shibboleth Authentication**
+2. **USC Shibboleth Authentication**
    You will be redirected to the standard USC sign-in page. Enter your **USC NetID** and password, and complete the **Duo 2FA** prompt if requested.
 
-4. **Redirection**
+3. **Redirection**
    Once verified, you will be automatically returned to the Backend.AI portal with your session active.
+
+4. **When you Log out**
+   When you log out and log back in, instead of using the standard email/password fields, click the link labeled **LOGIN WITH USC** at the bottom of the card.
+
+   ![Backend AI Login Interface](images/login.png)
 
 ---
 
