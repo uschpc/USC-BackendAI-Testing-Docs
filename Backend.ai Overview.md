@@ -49,9 +49,13 @@ For all USC users, it is recommended to use the **Single Sign-On (SSO)** method.
    You will be redirected to the standard USC sign-in page. Enter your **USC NetID** and password, and complete the **Duo 2FA** prompt if requested.
 
 3. **Redirection**
-   Once verified, you will be automatically returned to the Backend.AI portal with your session active.
+   Once verified, you will be automatically directed to topanga login page. Click on the button with 'Login with USC' and you will be directed to the dashboard page.
 
-4. **When you Log out**
+   ![Topanga Login Interface](images/topanga.png)
+
+
+
+5. **When you Log out**
    When you log out and log back in, instead of using the standard email/password fields, click the link labeled **LOGIN WITH USC** at the bottom of the card.
 
    ![Backend AI Login Interface](images/login.png)
