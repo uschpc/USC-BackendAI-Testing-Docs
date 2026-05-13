@@ -8,6 +8,7 @@ Using a module system like Lmod is helpful because applications and libraries co
 When you log in, there is no modules loaded by default. You can load usc module first and then you can enter the `module list` command to view them:
 
 ```
+work@main1[hYkzzAej-session]:~$ source /apps/lmod/set-lmod.sh
 work@main1[hYkzzAej-session]:~$ module load usc
 work@main1[hYkzzAej-session]:~$ module list
 
