@@ -33,7 +33,7 @@ Backend.AI integrates with different file systems. Users interact with these thr
 
 ## Accessing the Portal & Authentication
 
-To begin using the Backend.AI platform at USC, navigate to the following web address:
+To begin using the Topanga platform at USC, navigate to the following web address:
 
 **Portal URL:** [https://topanga.carc.usc.edu](https://topanga.carc.usc.edu)
 
