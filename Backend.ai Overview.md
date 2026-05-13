@@ -1,4 +1,4 @@
-# Backend.AI Overview
+# Topanga Overview
 
 Topanga is the project name for USC CARC's Backend.AI cloud application deployment. Backend.AI is an open source cloud resource management platform that makes it easy to utilize virtualized compute resource clusters in cloud or on-premises environments. Its container-based GPU virtualization technology supports the efficient use of GPUs by flexibly dividing one physical GPU so multiple users can use it at the same time. Beyond raw GPU sharing, Backend.AI offers a full-stack platform for AI/ML workloads — covering interactive development, distributed training, and model serving — with management features tailored for researchers, administrators, and DevOps teams.
 
