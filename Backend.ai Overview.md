@@ -35,13 +35,13 @@ Backend.AI integrates with different file systems. Users interact with these thr
 
 To begin using the Backend.AI platform at USC, navigate to the following web address:
 
-**Portal URL:** [https://backendai.carc.usc.edu/start](https://backendai.carc.usc.edu/start)
+**Portal URL:** [https://topanga.carc.usc.edu](https://topanga.carc.usc.edu)
 
 ### Logging in with USC Credentials
 For all USC users, it is recommended to use the **Single Sign-On (SSO)** method. This ensures you are authenticated through the university's secure system.
 
 1. **Visit the Start Page**
-   Go to [backendai.carc.usc.edu/start](https://backendai.carc.usc.edu/start).
+   Go to [backendai.carc.usc.edu/start](https://topanga.carc.usc.edu).
 
 2. **Select the USC Login Option**
    Instead of using the standard email/password fields, click the link labeled **LOGIN WITH USC** at the bottom of the card.
