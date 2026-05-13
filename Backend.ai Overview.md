@@ -21,7 +21,7 @@ If a multi-node request can fit on a single agent, Topanga consolidates it autom
 
 
 ### 3. Multiple Session Types Tailored to AI Workflows
-Rather than one-size-fits-all jobs, Backend.AI offers three workload types:
+Rather than one-size-fits-all jobs, Topanga offers three workload types:
 - **Interactive sessions** — Jupyter, VS Code, Terminal for live experimentation.
 - **Batch sessions** — Queued long-running jobs such as full training runs.
 - **Inference / Model Serving** — Deploy trained models as autoscaling API endpoints.
