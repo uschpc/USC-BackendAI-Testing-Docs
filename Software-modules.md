@@ -5,7 +5,7 @@ Using a module system like Lmod is helpful because applications and libraries co
 
 ## Accessing the Terminal
 #### 1. The Launch Process
-When you are inside an interative session. Wait for the Session status to turn green and say "Running".
+When you are inside an interactive session. Wait for the Session status to turn green and say "Running".
 In the session list, choose the newly created session.
 Then, in the upper right corner, you will see icons. 
 
