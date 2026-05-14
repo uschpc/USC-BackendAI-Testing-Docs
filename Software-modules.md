@@ -3,6 +3,26 @@ On Backend.ai System, users can find and load software using the [Lmod](https://
 
 Using a module system like Lmod is helpful because applications and libraries compiled with one compiler are not necessarily compatible with applications and libraries compiled with a different compiler, and your shell environment must be changed to accommodate these incompatibilities. **With Lmod, resetting your environment is done dynamically when you load new modules**. Loading a module will make available only compatible software for you to use. In this way, modules are organized in a hierarchy based on compilers.
 
+## Accessing the Terminal
+#### 1. The Launch Process
+When you are inside an interative session. Wait for the Session status to turn green and say "Running".
+In the session list, choose the newly created session.
+Then, in the upper right corner, you will see icons. 
+
+![Session Icons](./images/interactive_apps/session_icons_01.png)
+
+#### 2. To start a Terminal App, click **`>_`** icon, and a new browser tab will open with the terminal interface.
+
+Within the terminal app:
+
+- You will see a shell prompt (e.g., `work@main1[gDz6uH2p-session]:~$`).
+- You can:
+  - Run Linux shell commands (`ls`, `cd`, `python`, etc.)
+  - Create and manage files
+  - Install software
+
+Closing the terminal browser tab does not stop the command that is running or the compute session.
+
 ### Finding software
 
 When you log in, there is no modules loaded by default. You can load usc module first and then you can enter the `module list` command to view them:
