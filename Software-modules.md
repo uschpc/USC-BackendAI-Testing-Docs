@@ -16,7 +16,7 @@ Then, in the upper right corner, you will see icons.
 Within the terminal app:
 
 - You will see a shell prompt (e.g., `work@main1[gDz6uH2p-session]:~$`).
-  ![Shell Login Page](images/shell-login.png)
+  ![Shell Login Page](images/shell_login.png)
 - You can:
   - Run Linux shell commands (`ls`, `cd`, `python`, etc.)
   - Create and manage files
