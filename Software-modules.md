@@ -21,7 +21,7 @@ Within the terminal app:
   - Run Linux shell commands (`ls`, `cd`, `python`, etc.)
   - Create and manage files
   - Install software
-  - Use module system inside the shell
+  - Use module system 
 
 Closing the terminal browser tab does not stop the command that is running or the compute session.
 
