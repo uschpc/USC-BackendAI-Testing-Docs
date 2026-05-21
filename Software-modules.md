@@ -3,7 +3,7 @@ On Topanga System, users can find and load software using the [Lmod](https://lmo
 
 Using a module system like Lmod is helpful because applications and libraries compiled with one compiler are not necessarily compatible with applications and libraries compiled with a different compiler, and your shell environment must be changed to accommodate these incompatibilities. **With Lmod, resetting your environment is done dynamically when you load new modules**. Loading a module will make available only compatible software for you to use. In this way, modules are organized in a hierarchy based on compilers.
 
-## Accessing the Terminal to use the module system
+## Accessing the Terminal to Use the Module System
 #### 1. The Launch Process
 When you are inside an interactive session, wait for the Session status to turn green and say "Running".
 In the session list, choose the newly created session.
