@@ -15,7 +15,7 @@ Then, in the upper right corner, you will see icons.
 
 Within the terminal app:
 
-- You will see a shell prompt (e.g., `work@main1[gDz6uH2p-session]:~$`).
+- You will see a shell prompt (e.g., `work@main1[XUIaZJhn-sessio]:~$`).
   ![Shell Login Page](images/shell_login.png)
 - You can:
   - Run Linux shell commands (`ls`, `cd`, `python`, etc.)
@@ -29,9 +29,9 @@ Closing the terminal browser tab does not stop the command that is running or th
 When you log in to a terminal, there is no modules loaded by default. In order to use the module system, you need to first run some setup script. Then, you can load usc module and you can enter the `module list` command to view them:
 
 ```
-work@main1[hYkzzAej-session]:~$ source /apps/lmod/set-lmod.sh
-work@main1[hYkzzAej-session]:~$ module load usc
-work@main1[hYkzzAej-session]:~$ module list
+work@main1[XUIaZJhn-sessio]:~$ source /apps/lmod/set-lmod.sh
+work@main1[XUIaZJhn-sessio]:~$ module load usc
+work@main1[XUIaZJhn-sessio]:~$ module list
 
 Currently Loaded Modules:
   1) gcc/13.3.0      3) openblas/0.3.28   5) usc/13.3.0
@@ -48,7 +48,7 @@ The naming convention for modules is `<software_name>/<version>` (e.g., `gcc/13.
 To see what modules you can load into your environment, enter the command `module av`. With `gcc/13.3.0` loaded, this will print a large number of available modules:
 
 ```
-work@main1[hYkzzAej-session]:~$: module av
+work@main1[XUIaZJhn-sessio]:~$: module av
 
 ---- /apps/spack/2406/apps/lmod/linux-rocky8-x86_64/openmpi/5.0.5-mufqd73/gcc/13.3.0 ----
    adiak/0.4.0                     hmmer/3.4                 parmetis/4.0.3         (D)
@@ -81,7 +81,7 @@ work@main1[hYkzzAej-session]:~$: module av
 To unload all your loaded modules, enter the command `module purge`. Then `module list` will return `No modules loaded`. If you enter `module av` again, then you will see only the core modules. These are primarily compilers but can also include applications like MATLAB that are pre-built and have no dependencies:
 
 ```
-work@main1[hYkzzAej-session]:~$  module av
+work@main1[XUIaZJhn-sessio]:~$  module av
 
 ----------------------- /apps/spack/2406/apps/lmod/linux-rocky8-x86_64/openmpi/5.0.5-mufqd73/gcc/13.3.0 -----------------------
    adiak/0.4.0                     hmmer/3.4                 parmetis/4.0.3         (D)
@@ -115,7 +115,7 @@ If you know the name of a software package, use the `module spider` command to f
 For example, to search for Open MPI modules:
 
 ```
-work@main1[hYkzzAej-session]:~$  module spider openmpi
+work@main1[XUIaZJhn-sessio]:~$  module spider openmpi
 
 -----------------------------------------------------------------------------------
   openmpi:
@@ -136,7 +136,7 @@ work@main1[hYkzzAej-session]:~$  module spider openmpi
 This shows that there are two versions of Open MPI available. For more specific information, add the version to your command as given in the example:
 
 ```
-work@main1[hYkzzAej-session]:~$  module spider openmpi/5.0.5
+work@main1[XUIaZJhn-sessio]:~$  module spider openmpi/5.0.5
 
 -----------------------------------------------------------------------------------
   openmpi: openmpi/5.0.5
@@ -236,13 +236,13 @@ This ensures that the loaded modules are compatible with one another.
 For example, let's say you want to use the `jellyfish` package compiled with `gcc/13.3.0`. You would load it with:
 
 ```
-work@main1[hYkzzAej-session]:~$ module load gcc/13.3.0 jellyfish
+work@main1[XUIaZJhn-sessio]:~$ module load gcc/13.3.0 jellyfish
 ```
 
 If for some reason you need to switch to the `intel` compiler set, you can use the `module swap` command to swap out the `gcc` compiler:
 
 ```
-work@main1[hYkzzAej-session]:~$ module swap gcc intel
+work@main1[XUIaZJhn-sessio]:~$ module swap gcc intel
 
 Due to MODULEPATH changes, the following have been reloaded:
   1) jellyfish/2.3.0
@@ -253,7 +253,7 @@ Lmod automatically changes the `jellyfish` module to one that was compiled with 
 The module system can also automatically replace or deactivate modules to ensure the packages that are loaded are compatible with each other. For example, switching from `gcc/13.3.0` to `gcc/12.3.0`:
 
 ```
-work@main1[hYkzzAej-session]:~$ module load gcc/12.3.0
+work@main1[XUIaZJhn-sessio]:~$ module load gcc/12.3.0
 
 Inactive Modules:
   1) openblas/0.3.28     2) openmpi/5.0.5
