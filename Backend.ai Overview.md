@@ -68,7 +68,7 @@ Before logging in, make sure you are connected to the **USC VPN**. Several ports
 The **Start Page** is your primary entry point for launching tasks. It features quick-action cards to manage data and compute workloads.
 
 
-<img src="images/start_page.png" alt="image" style="width:500px;height:auto;">
+<img src="images/start_page.png" alt="image" style="width:1600px;height:auto;">
 
 ### Quick Start Cards
 - **Create New Storage Folder:** Initialize virtual folders (vFolders) and upload datasets. vFolders auto-mount into any container regardless of node.
