@@ -6,89 +6,104 @@ Compute sessions are the unit of work on Backend.AI: a container running on the 
 
 After logging in, click **Sessions** in the left sidebar and then click **START** in the upper right. The session launcher opens as a multi-step wizard. You can move through the steps with **Next**, jump to a step from the right-hand menu, or click **Skip to review** to accept defaults for the remaining steps.
 
-### 1. Session type
+![](images/RUNNING_Jobs/1.png)
 
-![Session type selection](images/RUNNING_Jobs/session_type_select.png)
+### 1. Session type
 
 Pick one of three user-facing session types:
 
 * **Interactive** — the default. The session stays alive until you destroy it (or until an admin-configured idle check terminates it). Use this for development, notebooks, and any work where you drive the session in real time.
-* **Batch** — define a startup script that runs as soon as the container is ready. The session terminates automatically when the script finishes. You can also set a **start time** (the session will not run before then, but is not guaranteed to start exactly at that time) and a **timeout duration** that force-terminates the session.
-* **Inference** — for serving models with persistent endpoints, auto-scaling, and automatic recovery. Requires a model definition file.
 
-> A fourth type, **System**, exists for internal operations (for example, sFTP uploads) and is managed automatically — you will not create it directly.
+![](images/RUNNING_Jobs/2.png)
+
+* **Batch** — define a startup script that runs as soon as the container is ready. The session terminates automatically when the script finishes. You can also set a **start time** (the session will not run before then, but is not guaranteed to start exactly at that time) and a **timeout duration** that force-terminates the session.
+
+![](images/RUNNING_Jobs/3.png)
+
+* **Inference** — for serving models with persistent endpoints, auto-scaling, and automatic recovery. Requires a model definition file.
 
 The optional **Session name** field accepts 4–64 alphanumeric characters with no spaces. If you leave it blank, Backend.AI assigns a random name.
 
-![Batch session options](images/RUNNING_Jobs/batch_session_options.png)
-
 ### 2. Environments & resource allocation
 
-![Environments and resource allocation](images/RUNNING_Jobs/environments_and_resources.png)
+**Environment** is the base image — for example, PyTorch, vLLM, or custom images. Pick the environment you need.
 
-**Environment** is the base image — for example, PyTorch, TensorFlow, or a plain Python/C++ image. Pick the **Version** (e.g. TensorFlow 2.3 vs 1.15) and, if available, override the **Image Name** directly. You can also set **environment variables** (such as `PATH`) here; see the [environment variables](#adding-environment-variables) section below.
+![](images/RUNNING_Jobs/4.png)
+
+For each environment, you can select the **Version** (e.g. PyTorch 2.10 vs 2.8). You can also set **environment variables** (such as `PATH`, or `HF_TOKEN` for Hugging Face) here; see the [environment variables](#adding-environment-variables) section below.
+
+![](images/RUNNING_Jobs/5.png)
+![](images/RUNNING_Jobs/6.png)
 
 Under **Resource allocation** you choose how much hardware the session gets:
 
-<p align="center"><img src="images/RUNNING_Jobs/resource_allocation.png" alt="Resource allocation sliders" width="540"></p>
-
 * **Resource Group** — the pool of host servers your session can run on. Servers in a group typically share the same GPU type. If you have access to more than one group, pick whichever fits your workload.
+
+![](images/RUNNING_Jobs/7.png)
+
 * **Resource Presets** — predefined CPU / memory / GPU bundles. Sliders let you fine-tune CPU cores, RAM, shared memory, AI accelerators (GPUs/NPUs), and the number of sessions to launch in parallel.
+
+![](images/RUNNING_Jobs/8.png)
+
 * **Sessions** — set above 1 to launch multiple identical sessions at once. Requests that cannot fit are queued.
-* **Select Agent** — by default the scheduler picks the agent. You can override this for single-node, single-container sessions.
-* **Cluster mode** — for multi-node distributed sessions.
+
+![](images/RUNNING_Jobs/9.png)
+
+* **Cluster mode** — You can also use this platform to launch distributed sessions in a cluster. This will use the high-bandwidth network between the agents. The connections between the 2 nodes are automatically established and you do not need to use an SSH key to connect to the other nodes.
+
+![](images/RUNNING_Jobs/10.png)
 
 > When using a GPU, allocate at least **2× the GPU memory in RAM**. Anything less and the GPU will spend significant time idle waiting for the host.
 
-<p align="center"><img src="images/RUNNING_Jobs/hpc_optimization.png" alt="HPC optimizations" width="520"></p>
-
-The **High-Performance Computing Optimizations** section exposes the `nthreads-var` control. By default Backend.AI sets it equal to the session's CPU count, which speeds up typical HPC workloads. For multi-process OpenMP workloads that already spawn many threads, lowering this to `1` or `2` avoids oversubscription and the slowdown that comes with it.
+The **High-Performance Computing Optimizations** section exposes the `nthreads-var` control. By default Backend.AI sets it equal to the session's CPU count, which speeds up typical HPC workloads.
 
 ### 3. Data & storage
 
-![Data and storage](images/RUNNING_Jobs/data_and_storage.png)
+Select the storage folders to mount inside the container. Anything outside a mounted folder is wiped when the session ends, so put data you want to keep into a mounted folder. 
 
-Select the storage folders to mount inside the container. Anything outside a mounted folder is wiped when the session ends, so put data you want to keep into a mounted folder. You can create a new folder right here with the **+** button next to the search box; it will be auto-selected for mounting. For more on storage folders, see [Data Management](Data%20Management.md).
+You can create a new folder right here with the **+** button next to the search box; it will be auto-selected for mounting. For more on storage folders, see [Data Management](Data%20Management.md). You can also mount the storage folders that you have created in the previous step and it will show up in `/home/work/<storage_folder_name>`
+
+![](images/RUNNING_Jobs/11.png)
 
 ### 4. Network
 
-![Network settings](images/RUNNING_Jobs/network_settings.png)
-
 Use this step to declare **preopen ports** — internal container ports that should be exposed at startup so you can run a custom server (web service, API, dashboard) without rebuilding the image. See [adding preopen ports](#adding-preopen-ports) below for the details.
+
+![](images/RUNNING_Jobs/12.png)
 
 ### 5. Confirm and launch
 
-![Confirm and launch](images/RUNNING_Jobs/confirm_and_launch.png)
-
 The final step is a summary of every setting: image, resources, mounts, environment variables, preopen ports. Use the **Edit** icon on any card to jump back to that step. If something is wrong, an error card appears and you can fix it before launching.
 
-Click **Launch**. If you did not mount any folders a warning dialog appears — click **Start** to proceed anyway. A notification appears in the bottom-right of the screen when the session starts:
+![](images/RUNNING_Jobs/13.png)
 
-![Session created notification](images/RUNNING_Jobs/session_created.png)
+> Click **Launch**. If you did not mount any folders a warning dialog appears — click **Start** to proceed anyway. Notice that all files saved in `/home/work` will be deleted when the session ends. You need to use your `/home1` or `/project2` or `/scratch1` directories to save your data.
+
+A notification appears in the bottom-right of the screen when the session starts
 
 ## Working in the environment
 
 Once the session is **RUNNING**, click its name in the session list to open the **Session Detail Panel**, which shows the session ID, type, environment, mounts, allocated resources, elapsed time, agent, cluster mode, network I/O, and per-kernel info.
 
-<p align="center"><img src="images/RUNNING_Jobs/session_detail_panel.png" alt="Session detail panel" width="600"></p>
+![](images/RUNNING_Jobs/15.png)
 
-The icons in the top-right of the detail panel are how you actually use the session. The first icon opens the **app launcher**:
+The icons in the top-right of the detail panel are how you actually use the session. The first icon opens the **app launcher**.
 
-<p align="center"><img src="images/RUNNING_Jobs/app_launcher.png" alt="App launcher dialog" width="380"></p>
+![](images/RUNNING_Jobs/16.png)
 
 ### Jupyter Notebook
 
-![Jupyter notebook running in a session](images/RUNNING_Jobs/jupyter_notebook.png)
-
 Click the Jupyter icon to open a notebook in a new tab. The container's libraries are already available, so no extra `pip install` is needed for whatever the base image provides. Click **NEW → Notebook** to create an `.ipynb` file. Files created this way live in `/home/work` and are deleted when the session ends — save anything you need into a mounted folder. See [Data Management](Data%20Management.md) for how mounted folders persist.
+
+![](images/RUNNING_Jobs/17.png)
 
 > The notebook file explorer also contains an `id_container` file with a private SSH key. Download it if you want to SSH/SFTP into the container from your laptop.
 
 ### Web terminal
 
-Click the terminal icon (`>_`, second icon) to open a shell in a new tab. See [Shell Access](Shell%20Access.md) for the basics. Files you create here are visible in Jupyter and vice versa — they are the same filesystem.
+Click the Console icon (`>_`, second icon) to open a shell in a new tab. See [Shell Access](Shell%20Access.md) for the basics. Files you create here are visible in Jupyter and vice versa — they are the same filesystem.
 
-![Web terminal](images/RUNNING_Jobs/web_terminal.png)
+![](images/RUNNING_Jobs/18.png)
 
 The terminal embeds **tmux**, so a few shortcuts are useful:
 
