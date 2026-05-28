@@ -71,7 +71,7 @@ The **Start Page** is your primary entry point for launching tasks. It features 
 <img src="images/start_page.png" alt="image" style="width:1400px;height:auto;">
 
 ### Quick Start Cards
-- **Create New Storage Folder:** Initialize virtual folders (vFolders) and upload datasets. vFolders auto-mount into any container regardless of node.
+- **Create New Storage Folder:** Initialize virtual folders (vFolders) and upload datasets. vFolders auto-mount into any container regardless of node. （Note: Creating virtual folders is optional) 
 - **Start Interactive Session:** Launch real-time environments like Jupyter Notebook, VS Code, R Studio, or a shell terminal.
 - **Start Batch Session:** Queue background tasks for predefined scripts or long-running training jobs.
 - **Start From URL:** Import projects directly from GitHub, GitLab, or remote notebooks.
