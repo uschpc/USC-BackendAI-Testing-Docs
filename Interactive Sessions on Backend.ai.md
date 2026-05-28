@@ -114,9 +114,9 @@ The terminal embeds **tmux**, so a few shortcuts are useful:
 
 ### Session logs
 
-![Session log viewer](images/RUNNING_Jobs/session_log.png)
-
 The log icon in the control panel opens the kernel log. Useful when a session is misbehaving or a batch script failed. You can also click **Log** next to a kernel hostname inside the detail panel to view that specific kernel's log.
+
+![](images/RUNNING_Jobs/20.png)
 
 ## Managing a running session
 
@@ -128,7 +128,7 @@ Click **Edit** in the session detail panel to rename. The new name follows the s
 
 ### Idle checks
 
-<p align="center"><img src="images/RUNNING_Jobs/idle_checks_panel.png" alt="Idle checks panel" width="480"></p>
+![](images/RUNNING_Jobs/21.png)
 
 Backend.AI can auto-terminate sessions to reclaim resources. Three checkers may be active:
 
@@ -140,7 +140,8 @@ The idle window only looks at the **average** over the last idle timeout, so bri
 
 ### Terminate
 
-<p align="center"><img src="images/RUNNING_Jobs/terminate_session_dialog.png" alt="Terminate session dialog" width="540"></p>
+![](images/RUNNING_Jobs/23.png)
+![](images/RUNNING_Jobs/24.png)
 
 Click the red power button on the session row and confirm with **Terminate**. Anything outside a mounted folder is gone the moment the session ends, so move/copy what you need first.
 
@@ -160,7 +161,7 @@ On the **Network** step, type one or more port numbers between **1024 and 65535*
 
 ### Convert a session to an image (commit)
 
-<p align="center"><img src="images/RUNNING_Jobs/commit_session_to_image.png" alt="Commit session to a customized image" width="560"></p>
+![](images/RUNNING_Jobs/22.png)
 
 The **Commit** icon (fourth icon in the detail panel) saves the current state of a **RUNNING** interactive session as a new image. Enter an image name (4–32 chars, alphanumeric / `-` / `_`) and click **PUSH SESSION TO CUSTOMIZED IMAGE**. The new image shows up as `Customized<session name>` in the environment list when you launch future sessions, and is private to you.
 
