@@ -6,7 +6,7 @@ Topanga is USC CARC’s pay-as-you-go computing service for running AI/ML, data 
 
 ## What Makes Topanga Special
 
-Topanga stands apart from generic container or Kubernetes-based platforms because it is purpose-built for AI/ML and HPC workloads. Below are the capabilities that distinguish it.
+Topanga supports common research workflows, from interactive exploration to larger AI and HPC jobs. It can share GPU resources efficiently, connect multiple compute containers for distributed training, provide different session types for notebooks, terminals, batch jobs, and model serving, and make project files available through persistent virtual folders. The sections below describe these capabilities in more detail.
 
 ### 1. Fractional GPU Virtualization 
 Most platforms allocate GPUs as whole units, which wastes capacity for users who only need a slice. Topanga's GPU virtualization plug-in lets a single physical NVIDIA GPU be split among multiple containers — with isolated memory and compute shares — so a lab can fit many concurrent users on the same hardware without contention. This is one of the platform's signature features and a major reason organizations choose it over plain Kubernetes.
@@ -27,7 +27,7 @@ Rather than one-size-fits-all jobs, Topanga offers three workload types:
 - **Inference / Model Serving** — Deploy trained models as autoscaling API endpoints.
 
 ### 4. Storage Integration and Virtual Folders
-Topanga integrates with different file systems. Users interact with these through **Virtual Folders (vFolders)** — cloud folders that auto-mount into any container regardless of which node it runs on, with fine-grained sharing and per-user/project quotas.
+Topanga integrates with different file systems. Users interact with these through **Virtual Folders (vFolders)** — cloud folders that can mount into any container regardless of which node it runs on, with fine-grained sharing and per-user/project quotas.
 
 
 
