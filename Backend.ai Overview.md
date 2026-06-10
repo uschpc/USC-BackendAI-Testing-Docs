@@ -71,11 +71,15 @@ The **Start Page** is your primary entry point for launching tasks. It features 
 <img src="images/start_page.png" alt="image" style="width:1400px;height:auto;">
 
 ### Quick Start Cards
-- **Create New Storage Folder:** A "cloud" folder that is always accessible and mountable in a container on a per-user basis, regardless of which node the container runs on. After creating your own virtual folder, you can upload your own program code, data, etc. in advance and mount the folder when you run the compute session to read from and write to it as if it is on your local disk. Having virtual folder is a way to expand your storage and is a faster storage option.（Note: Creating virtual folders is optional) 
-- **Start Interactive Session:** Launch real-time environments like Jupyter Notebook, VS Code, R Studio, or a shell terminal.
-- **Start Batch Session:** Queue background tasks for predefined scripts or long-running training jobs.
-- **Start From URL:** Import projects directly from GitHub, GitLab, or remote notebooks.
-- **Start Model Service:** Deploy trained models as API endpoints for inference, with autoscaling.
+- **Create New Storage Folder:** Create a persistent storage folder, also called a virtual folder or vFolder, that can be mounted into your compute sessions. You can upload code, datasets, notebooks, and results to this folder before starting a session, then access those files inside Jupyter, VS Code, RStudio, or a terminal as if they were on a local disk. Files in a storage folder remain available after a session ends. Creating a storage folder is optional, but it is recommended if you plan to reuse data or save results.
+
+- **Start Interactive Session:** Launch a live computing environment for hands-on work. Interactive sessions are useful for exploring data, testing code, running notebooks, debugging scripts, or working in a terminal. Depending on the available environment, you can start tools such as Jupyter Notebook, VS Code, RStudio, or a shell terminal, choose the CPU/GPU resources you need, and mount your storage folders so your files are available during the session.
+
+- **Start Batch Session:** Submit a script or job to run in the background. Batch sessions are useful for longer-running work such as model training, simulations, data preprocessing, or other tasks that do not require constant interaction. You can choose the environment and resources, mount any needed storage folders, and review logs or output files after the job starts or completes.
+
+- **Start From URL:** Start a session from an existing project or notebook hosted online, such as a GitHub or GitLab repository. This is useful when you want to quickly work from shared code, course materials, example notebooks, or a research project repository without setting everything up manually from scratch.
+
+- **Start Model Service:** Deploy a trained model as an inference service so it can receive requests and return predictions through an API endpoint. This is useful for testing, sharing, or running AI models after training. You can choose the model environment and compute resources needed for the service, then monitor and stop the service when it is no longer needed.
 
 ---
 
