@@ -35,6 +35,10 @@ Topanga supports several ways to run your work:
 
 Topanga connects your sessions to persistent storage through **Virtual Folders (vFolders)**. These folders can be mounted into your compute sessions regardless of which compute node the session runs on, making it easier to reuse code, data, and results across sessions. Virtual folders also support sharing and per-user or per-project quotas.
 
+
+## Request Topanga Allocations
+Requesting Topanga Allocations can be done through CARC user portal: hpcaccount.carc.usc.edu. 
+
 ---
 
 ## Accessing the Portal & Authentication
