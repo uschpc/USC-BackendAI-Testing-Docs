@@ -37,7 +37,7 @@ Topanga connects your sessions to persistent storage through **Virtual Folders (
 
 
 ## Request Topanga Allocations
-Requesting Topanga Allocations can be done through CARC user portal: hpcaccount.carc.usc.edu. 
+Requesting Topanga Allocations can be done through CARC user portal: [https://hpcaccount.usc.edu](https://hpcaccount.usc.edu). 
 
 ---
 
