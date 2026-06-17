@@ -35,17 +35,7 @@ Your justification should briefly include:
 If **Topanga Premium Service (Cloud)** is not available in the resource menu, submit a CARC support ticket under the **Account** category and ask for Topanga cloud allocation access for the project. Include the project ID, PI, users who need access, requested allocation size, and reason for the request.
 
 
-## 3. Renewing a Topanga Allocation
-
-When an allocation is near its end date, the Project Detail page may show a yellow renewal label such as **Expires in ... Click to renew**.
-
-1. Open the project in the CARC User Portal.
-2. In the **Allocations** table, find the **Topanga Premium Service (Cloud)** allocation.
-3. Click the renewal action.
-4. Confirm the requested allocation size and update the justification if the project scope has changed.
-5. Submit the renewal before the end date.
-
-## 4. After Approval
+## 3. After Approval
 
 Once the allocation status is **Active**, open the Topanga portal:
 
