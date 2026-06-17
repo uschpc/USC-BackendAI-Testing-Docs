@@ -27,10 +27,7 @@ The screenshot below shows where to find the green request button. Existing rows
 
 <img width="900" alt="CARC allocation panel showing the Request Resource Allocation button" src="images/request-allocation/request-reousrce-allocation.png" />
 
-Your justification should briefly include:
 
-- Expected workload, such as Jupyter notebooks, GPU training, batch jobs, model serving, or class exercises
-- Expected CPU, GPU, memory, runtime, and concurrent session needs
 
 If **Topanga Premium Service (Cloud)** is not available in the resource menu, submit a CARC support ticket.
 
