@@ -32,7 +32,7 @@ Your justification should briefly include:
 - Expected workload, such as Jupyter notebooks, GPU training, batch jobs, model serving, or class exercises
 - Expected CPU, GPU, memory, runtime, and concurrent session needs
 
-If **Topanga Premium Service (Cloud)** is not available in the resource menu, submit a CARC support ticket under the **Account** category and ask for Topanga cloud allocation access for the project. Include the project ID, PI, users who need access, requested allocation size, and reason for the request.
+If **Topanga Premium Service (Cloud)** is not available in the resource menu, submit a CARC support ticket.
 
 
 ## 3. After Approval
