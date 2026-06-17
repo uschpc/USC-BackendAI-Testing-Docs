@@ -28,7 +28,7 @@ After approval, the allocation should appear in the project's allocation table w
 
 The screenshot below shows where to find the green request button. Existing rows in the allocation table are examples only; for Topanga, request the **Topanga (Cloud)** resource.
 
-<img width="900" alt="CARC allocation panel showing the Request Resource Allocation button" src="https://github.com/user-attachments/assets/0aea8797-7b58-4693-bc51-742e1b1b7b05" />
+<img width="900" alt="CARC allocation panel showing the Request Resource Allocation button" src="images/request-allocation/request-reousrce-allocation.png" />
 
 Your justification should briefly include:
 
@@ -90,4 +90,3 @@ Reason:
 - [CARC User Portal](https://hpcaccount.usc.edu)
 - [CARC Allocation Types and Requests](https://www.carc.usc.edu/user-guides/project-and-allocation-management/allocation-types-and-requests.html)
 - [Topanga portal](https://topanga.carc.usc.edu)
-
