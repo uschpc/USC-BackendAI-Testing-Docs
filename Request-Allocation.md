@@ -8,9 +8,9 @@ Before requesting an allocation, make sure your PI has an active CARC project an
 
 ## 1. Allocation Type
 
-For Topanga, request the Topanga cloud computing resource in the CARC User Portal.
+For Topanga, request the **Topanga Previous Service (Cloud)** resource in the CARC User Portal.
 
-- **Topanga (Cloud)**: Provides access to Backend.AI/Topanga cloud computing resources for AI/ML, data science, research computing, notebooks, terminals, batch sessions, GPU sessions, and model services.
+- **Topanga Previous Service (Cloud)**: Provides access to Backend.AI/Topanga cloud computing resources for AI/ML, data science, research computing, notebooks, terminals, batch sessions, GPU sessions, and model services.
 
 After approval, the allocation should appear in the project's allocation table with **Resource Type** listed as **Cloud**.
 
@@ -21,12 +21,12 @@ After approval, the allocation should appear in the project's allocation table w
 3. Select the project that should receive Topanga access.
 4. On the Project Detail page, find the **Allocations** table.
 5. Click the green **Request Resource Allocation** button.
-6. Choose the Topanga cloud computing resource from the resource menu.
+6. Choose **Topanga Previous Service (Cloud)** from the resource menu.
 7. Enter the requested quantity or allocation size, if the form asks for one.
 8. Add a justification explaining why the project needs Topanga access.
 9. Submit the request.
 
-The screenshot below shows where to find the green request button. Existing rows in the allocation table are examples only; for Topanga, request the **Topanga (Cloud)** resource.
+The screenshot below shows where to find the green request button. Existing rows in the allocation table are examples only; for Topanga, request the **Topanga Previous Service (Cloud)** resource.
 
 <img width="900" alt="CARC allocation panel showing the Request Resource Allocation button" src="images/request-allocation/request-reousrce-allocation.png" />
 
@@ -38,7 +38,7 @@ Your justification should briefly include:
 - Expected CPU, GPU, memory, runtime, and concurrent session needs
 - Start date, deadline, or renewal reason, if relevant
 
-If the Topanga resource is not available in the resource menu, submit a CARC support ticket under the **Account** category and ask for Topanga cloud allocation access for the project. Include the project ID, PI, users who need access, requested allocation size, and reason for the request.
+If **Topanga Previous Service (Cloud)** is not available in the resource menu, submit a CARC support ticket under the **Account** category and ask for Topanga cloud allocation access for the project. Include the project ID, PI, users who need access, requested allocation size, and reason for the request.
 
 ## 3. Allocation Status
 
@@ -56,7 +56,7 @@ The allocation table shows the resource name, resource type, information, quanti
 When an allocation is near its end date, the Project Detail page may show a yellow renewal label such as **Expires in ... Click to renew**.
 
 1. Open the project in the CARC User Portal.
-2. In the **Allocations** table, find the Topanga cloud allocation.
+2. In the **Allocations** table, find the **Topanga Previous Service (Cloud)** allocation.
 3. Click the renewal action.
 4. Confirm the requested allocation size and update the justification if the project scope has changed.
 5. Submit the renewal before the end date.
@@ -76,7 +76,7 @@ If the allocation is active in the CARC User Portal but you still cannot use it 
 ```text
 Project ID:
 PI:
-Resource requested: Topanga (Cloud)
+Resource requested: Topanga Previous Service (Cloud)
 Requested quantity or allocation size:
 Users or course:
 Workload description:
