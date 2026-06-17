@@ -1,7 +1,7 @@
 # USC-BackendAI-Testing-Docs
 This is a documentation related to how to use backend.ai
 
-Hao: Backend.ai Overview & Software modules
+Hao: Backend.ai Overview & Software modules & Request Allocation
 
 Cesar: Data Management
 
