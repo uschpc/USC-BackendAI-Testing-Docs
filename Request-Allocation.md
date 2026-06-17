@@ -43,7 +43,7 @@ Once the allocation status is **Active**, open the Topanga portal:
 
 Connect to the USC network or VPN is needed, sign in with USC SSO. You should then be able to create sessions and use the cloud computing resources covered by your allocation.
 
-If the allocation is active in the CARC User Portal but you still cannot use it in Topanga, log out and back in, check that you selected the correct project, and contact CARC support if the quota still does not appear.
+If the allocation is active in the CARC User Portal but you still cannot use it in Topanga, log out and back in,  and contact CARC support if the quota still does not appear.
 
 
 
