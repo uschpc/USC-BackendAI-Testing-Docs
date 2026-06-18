@@ -18,7 +18,7 @@ After approval, the allocation should appear in the project's allocation table w
 2. Sign in with your USC NetID and complete Duo if prompted.
 3. Select the project that should receive Topanga access.
 4. On the Project Detail page, find the **Allocations** table.
-5. Click the green **Request Resource Allocation** button.
+5. Click the green **Request Resource Allocation** button. Following the steps, this gives you access to Topanga services. 
 6. Choose **Topanga Premium Service (Cloud)** from the resource menu.
 7. Add a justification explaining why the project needs Topanga access.
 8. Submit the request.
