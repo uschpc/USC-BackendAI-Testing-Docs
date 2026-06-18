@@ -17,6 +17,10 @@ Pick one of three user-facing session types:
 ![](images/RUNNING_Jobs/2.png)
 
 * **Batch** — define a startup script that runs as soon as the container is ready. The session terminates automatically when the script finishes. You can also set a **start time** (the session will not run before then, but is not guaranteed to start exactly at that time) and a **timeout duration** that force-terminates the session.
+    * If using this option to launch a script under "Startup Command" use `bash` to launch as in:
+
+
+    ``` bash /path/to/script.sh```
 
 ![](images/RUNNING_Jobs/3.png)
 
