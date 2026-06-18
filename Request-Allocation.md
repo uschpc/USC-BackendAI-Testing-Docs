@@ -1,6 +1,6 @@
-# Request Topanga Allocation
+# Request Topanga Access
 
-Topanga allocations are requested from the CARC User Portal. An active Topanga allocation gives a CARC project access to launch Topanga sessions and sets the project's cloud computing limits, quota, status, and end date.
+Topanga access can be requested from the CARC User Portal. An active Topanga allocation gives a CARC project access to launch Topanga sessions and sets the project's cloud computing limits, quota, status, and end date.
 
 Before requesting an allocation, make sure your PI has an active CARC project and the annual project review is complete. If the portal asks you to complete a project review, finish that step before continuing.
 
