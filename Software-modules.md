@@ -27,11 +27,9 @@ Closing the terminal browser tab does not stop the command that is running or th
 
 ### Finding software
 
-When you log in to a terminal, there is no modules loaded by default. In order to use the module system, you need to first run some setup script. Then, you can load usc module and you can enter the `module list` command to view them:
+When you log in to a terminal, you can enter the `module list` command to view a list of modules:
 
 ```
-work@main1[XUIaZJhn-sessio]:~$ source /apps/lmod/set-lmod.sh
-work@main1[XUIaZJhn-sessio]:~$ module load usc
 work@main1[XUIaZJhn-sessio]:~$ module list
 
 Currently Loaded Modules:
