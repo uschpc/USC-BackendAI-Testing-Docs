@@ -4,6 +4,8 @@ Topanga access is requested from the CARC User Portal, not from the Topanga dash
 
 Approved Topanga access lets a CARC project launch Topanga sessions and use cloud computing resources on demand. The CARC User Portal may display this access as a **Cloud** resource allocation because that is how project access, quota, status, and end dates are managed.
 
+Once Topanga access is granted for a CARC project, every user assigned to that project can access Topanga resources. Usage billing goes to the project's PI, so the PI should be aware that users' sessions consume pay-as-you-go resources.
+
 Before requesting access, make sure your PI has an active CARC project and the annual project review is complete. If the portal asks you to complete a project review, finish that step before continuing.
 
 ## 1. Access Type
@@ -68,8 +70,6 @@ Once the access status is **Active**, open the Topanga portal:
 [https://topanga.carc.usc.edu](https://topanga.carc.usc.edu)
 
 Connect to the USC network or VPN if needed, sign in with USC SSO, and make sure the correct project is selected in Topanga. You should then be able to create sessions and use Topanga as a pay-as-you-go computing service.
-
-Once Topanga access is granted for a CARC project, every user assigned to that project can access Topanga resources. Usage billing goes to the project's PI, so the PI should be aware that users' sessions consume pay-as-you-go resources.
 
 If the access is active in the CARC User Portal but you still cannot use it in Topanga, log out and back in, check that you selected the correct project, and contact CARC support if the quota still does not appear.
 
