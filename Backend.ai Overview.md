@@ -37,7 +37,7 @@ Topanga connects your sessions to persistent storage through **Virtual Folders (
 
 
 ## Request Topanga Access
-Requesting Topanga Access can be done through the CARC user portal: [https://hpcaccount.usc.edu](https://hpcaccount.usc.edu). Details of how to request Topanga access, please refer to the Requesting Topanga Access Section. 
+Topanga access can be requested through the CARC User Portal: [https://hpcaccount.usc.edu](https://hpcaccount.usc.edu). For step-by-step instructions, see the [Request Topanga Access](Request-Topanga-Access.md) guide.
 
 ---
 
@@ -139,4 +139,3 @@ The interface is organized into main work areas in the sidebar and top bar.
 - Cluster Compute Sessions: <https://webui.docs.backend.ai/en/latest/cluster_session/cluster_session.html>
 - Model Serving: <https://webui.docs.backend.ai/en/latest/model_serving/model_serving.html>
 - Mounting vFolders: <https://webui.docs.backend.ai/en/latest/mount_vfolder/mount_vfolder.html>
-
