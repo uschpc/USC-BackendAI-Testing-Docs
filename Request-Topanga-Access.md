@@ -1,12 +1,8 @@
 # Request Topanga Access
 
-Topanga access is requested from the CARC User Portal, not from the Topanga dashboard. Topanga is USC CARC's pay-as-you-go computing service for Backend.AI/Topanga cloud resources.
+Topanga access is requested from the CARC User Portal, not from the Topanga dashboard. Topanga is USC CARC's pay-as-you-go computing service for Backend.AI/Topanga cloud resources. Approved Topanga access lets a CARC project launch Topanga sessions and use cloud computing resources on demand. The CARC User Portal may display this access as a **Cloud** resource allocation because that is how project access, quota, status, and end dates are managed.
 
-Approved Topanga access lets a CARC project launch Topanga sessions and use cloud computing resources on demand. The CARC User Portal may display this access as a **Cloud** resource allocation because that is how project access, quota, status, and end dates are managed.
-
-Once Topanga access is granted for a CARC project, every user assigned to that project can access Topanga resources. Usage billing goes to the project's PI, so the PI should be aware that users' sessions consume pay-as-you-go resources.
-
-Before requesting access, make sure your PI has an active CARC project and the annual project review is complete. If the portal asks you to complete a project review, finish that step before continuing.
+Once Topanga access is granted for a CARC project, every user assigned to that project can access Topanga resources. Usage billing goes to the project's PI, so the PI should be aware that users' sessions consume pay-as-you-go resources. Before requesting access, make sure your PI has an active CARC project and the annual project review is complete. If the portal asks you to complete a project review, finish that step before continuing.
 
 ## 1. Access Type
 
