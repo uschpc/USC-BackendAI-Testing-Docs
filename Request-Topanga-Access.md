@@ -20,9 +20,8 @@ After approval, Topanga access should appear in the project's allocation table w
 4. On the Project Detail page, find the **Allocations** table.
 5. Click the green **Request Resource Allocation** button.
 6. Choose **Topanga AI Computing Service (Cloud)** from the resource menu.
-7. Enter the requested quantity or access size, if the form asks for one.
-8. Add a justification explaining why the project needs Topanga access.
-9. Submit the request.
+7. Add a justification explaining why the project needs Topanga access.
+8. Submit the request.
 
 The screenshot below shows where to find the green request button. Existing rows in the allocation table are examples only; for Topanga, request the **Topanga AI Computing Service (Cloud)** resource.
 
