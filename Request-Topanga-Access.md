@@ -71,10 +71,8 @@ If the access is active in the CARC User Portal but you still cannot use it in T
 ## 6. Example Request Text
 
 ```text
-Users or course:
 Workload description:
 Expected CPU, GPU, memory, runtime, and concurrent session needs:
-Requested start date or renewal date:
 Reason:
 ```
 
