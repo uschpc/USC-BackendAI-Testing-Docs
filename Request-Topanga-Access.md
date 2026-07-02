@@ -19,12 +19,12 @@ After approval, Topanga access should appear in the project's allocation table w
 3. Select the project that should receive Topanga access.
 4. On the Project Detail page, find the **Allocations** table.
 5. Click the green **Request Resource Allocation** button.
-6. Choose **Topanga Premium Service (Cloud)** from the resource menu.
+6. Choose **Topanga AI Computing Service (Cloud)** from the resource menu.
 7. Enter the requested quantity or access size, if the form asks for one.
 8. Add a justification explaining why the project needs Topanga access.
 9. Submit the request.
 
-The screenshot below shows where to find the green request button. Existing rows in the allocation table are examples only; for Topanga, request the **Topanga Premium Service (Cloud)** resource.
+The screenshot below shows where to find the green request button. Existing rows in the allocation table are examples only; for Topanga, request the **Topanga AI Computing Service (Cloud)** resource.
 
 <img width="900" alt="CARC allocation panel showing the Request Resource Allocation button" src="images/request-allocation/request-reousrce-allocation.png" />
 
@@ -36,7 +36,7 @@ Your justification should briefly include:
 - Expected CPU, GPU, memory, runtime, and concurrent session needs
 - Start date, deadline, or renewal reason, if relevant
 
-If **Topanga Premium Service (Cloud)** is not available in the resource menu, submit a CARC support ticket under the **Account** category and ask for Topanga cloud access for the project. Include the project ID, PI, users who need access, requested access size, and reason for the request.
+If **Topanga AI Computing Service (Cloud)** is not available in the resource menu, submit a CARC support ticket under the **Account** category and ask for Topanga cloud access for the project. Include the project ID, PI, users who need access, requested access size, and reason for the request.
 
 ## 3. Access Status
 
