@@ -6,9 +6,9 @@ Once Topanga access is granted for a CARC project, every user assigned to that p
 
 ## 1. Access Type
 
-For Topanga, request the **Topanga Premium Service (Cloud)** resource in the CARC User Portal.
+For Topanga, request the **Topanga AI Computing Service (Cloud)** resource in the CARC User Portal.
 
-- **Topanga Premium Service (Cloud)**: Provides access to Backend.AI/Topanga cloud computing resources for AI/ML, data science, research computing, notebooks, terminals, batch sessions, GPU sessions, and model services.
+- **Topanga AI Computing Service (Cloud)**: Provides access to Backend.AI/Topanga cloud computing resources for AI/ML, data science, research computing, notebooks, terminals, batch sessions, GPU sessions, and model services.
 
 After approval, Topanga access should appear in the project's allocation table with **Resource Type** listed as **Cloud**.
 
