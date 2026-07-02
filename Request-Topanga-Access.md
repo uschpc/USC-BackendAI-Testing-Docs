@@ -54,7 +54,7 @@ The allocation table shows the resource name, resource type, information, quanti
 When Topanga access is near its end date, the Project Detail page may show a yellow renewal label such as **Expires in ... Click to renew**.
 
 1. Open the project in the CARC User Portal.
-2. In the **Allocations** table, find the **Topanga Premium Service (Cloud)** entry.
+2. In the **Allocations** table, find the **Topanga AI Computing Service (Cloud)** entry.
 3. Click the renewal action.
 4. Confirm the requested access size and update the justification if the project scope has changed.
 5. Submit the renewal before the end date.
@@ -74,7 +74,7 @@ If the access is active in the CARC User Portal but you still cannot use it in T
 ```text
 Project ID:
 PI:
-Resource requested: Topanga Premium Service (Cloud)
+Resource requested: Topanga AI Computing Service (Cloud)
 Requested quantity or access size:
 Users or course:
 Workload description:
