@@ -71,10 +71,6 @@ If the access is active in the CARC User Portal but you still cannot use it in T
 ## 6. Example Request Text
 
 ```text
-Project ID:
-PI:
-Resource requested: Topanga AI Computing Service (Cloud)
-Requested quantity or access size:
 Users or course:
 Workload description:
 Expected CPU, GPU, memory, runtime, and concurrent session needs:
