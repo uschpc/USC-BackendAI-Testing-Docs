@@ -1,5 +1,6 @@
+# Software Modules
 
-On Topanga System, users can find and load software using the [Lmod](https://lmod.readthedocs.io/en/latest/) **module system** within a terminal. Lmod dynamically changes your shell environment using **module files** to ensure the software applications and libraries you use are compatible. Module files are configuration files, written as Lua scripts, that instruct how to make an application or library available during your shell session. Typically, a module file contains instructions to initialize or modify environment variables, such as `PATH`.
+Topanga AI Computing allows users to find and load software using the [Lmod](https://lmod.readthedocs.io/en/latest/) **module system** within a terminal. Lmod dynamically changes your shell environment using **module files** to ensure the software applications and libraries you use are compatible. Module files are configuration files, written as Lua scripts, that instruct how to make an application or library available during your shell session. Typically, a module file contains instructions to initialize or modify environment variables, such as `PATH`.
 
 Using a module system like Lmod is helpful because applications and libraries compiled with one compiler are not necessarily compatible with applications and libraries compiled with a different compiler, and your shell environment must be changed to accommodate these incompatibilities. **With Lmod, resetting your environment is done dynamically when you load new modules**. Loading a module will make available only compatible software for you to use. In this way, modules are organized in a hierarchy based on compilers.
 
@@ -11,7 +12,7 @@ Then, in the upper right corner, you will see icons.
 
 ![Session Icons](./images/interactive_apps/session_icons_01.png)
 
-#### 2. To start a Terminal App, click **`>_`** icon, and a new browser tab will open with the terminal interface.
+#### 2. To start a Terminal App, click the **`>_`** icon, and a new browser tab will open with the terminal interface.
 
 Within the terminal app:
 
