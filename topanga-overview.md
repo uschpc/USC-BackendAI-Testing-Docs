@@ -1,6 +1,6 @@
-# Topanga Overview
+# Topanga AI Computing Overview
 
-Topanga is The Center for Advanced Research Computing's (CARC) premiere pay-as-you-go computing platform for running AI/ML, data science, and research workloads in container-based sessions. Each session is a dedicated, isolated environment where you can choose the CPU or GPU resources you need and only pay for the time you use. Powered by [Backend.AI](https://webui.docs.backend.ai/en/latest/index.html), Topanga is an easy way to access CARC-managed computing resources on demand.
+Topanga AI Computing is The Center for Advanced Research Computing's (CARC) premiere pay-as-you-go computing platform for running AI/ML, data science, and research workloads in container-based sessions. Each session is a dedicated, isolated environment where you can choose the CPU or GPU resources you need and only pay for the time you use. Powered by [Backend.AI](https://webui.docs.backend.ai/en/latest/index.html), Topanga is an easy way to access CARC-managed computing resources on demand.
 
 Topanga supports several ways to run your work:
 

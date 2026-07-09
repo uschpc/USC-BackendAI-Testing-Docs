@@ -1,4 +1,4 @@
-# Topanga Access & Usage Workflow
+# Topanga Quick Start Guide
 
 ```mermaid
 flowchart TD

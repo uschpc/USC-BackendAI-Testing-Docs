@@ -2,7 +2,7 @@
 
 ### Request Access
 
-Request access to Topanga from the [CARC User Portal](https://hpcaccount.usc.edu). An active Topanga allocation gives a CARC project access to launch Topanga sessions and sets the project's cloud computing limits, quota, status, and end date.
+Request access to Topanga AI Computing from the [CARC User Portal](https://hpcaccount.usc.edu). An active Topanga allocation gives a CARC project access to launch Topanga sessions and sets the project's cloud computing limits, quota, status, and end date.
 
 Before requesting an allocation, make sure you have or belong to an active CARC project.
 
@@ -21,7 +21,7 @@ Before requesting an allocation, make sure you have or belong to an active CARC 
    * Start date, deadline, or renewal reason, if relevant
 8. Submit the request.
 
-After approval, the allocation will appear in the project's allocation table with one of the following status:
+After approval, the allocation will appear in the project's allocation table with one of the following statuses:
    * **New**: The request has been submitted and is waiting for CARC review.
    * **Active**: CARC has approved the request and the project can use Topanga.
    * **Expiring**: The access is close to its end date. Use the renewal action in the allocation table if the project still needs Topanga access. For instructions on annual project and allocation renewals, please visit our [website](https://www.carc.usc.edu/user-guides/project-and-allocation-management/annual-project-review)
