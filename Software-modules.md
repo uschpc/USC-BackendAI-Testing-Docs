@@ -5,30 +5,93 @@ Topanga AI Computing allows users to find and load software using the [Lmod](htt
 Using a module system like Lmod is helpful because applications and libraries compiled with one compiler are not necessarily compatible with applications and libraries compiled with a different compiler, and your shell environment must be changed to accommodate these incompatibilities. **With Lmod, resetting your environment is done dynamically when you load new modules**. Loading a module will make available only compatible software for you to use. In this way, modules are organized in a hierarchy based on compilers.
 
 ## Accessing the Terminal to Use the Module System
-#### 1. The Launch Process
-When you are inside an interactive session, wait for the Session status to turn green and say "Running".
-In the session list, choose the newly created session.
-Then, in the upper right corner, you will see icons. 
+#### 1. Launch a session
+Start an interactive session, then wait for the session status to turn green and say "Running". In the session list, choose the newly created session.
+
+#### 2. Start a terminal app
+In the upper right corner, click the **`>_`** icon, and a new browser tab will open with the terminal interface.
 
 ![Session Icons](./images/interactive_apps/session_icons_01.png)
 
-#### 2. To start a Terminal App, click the **`>_`** icon, and a new browser tab will open with the terminal interface.
+Within the terminal app, you will see a shell prompt (e.g., `work@main1[XUIaZJhn-sessio]:~$`).
 
-Within the terminal app:
+![Shell Login Page](images/shell_login.png)
 
-- You will see a shell prompt (e.g., `work@main1[XUIaZJhn-sessio]:~$`).
-  ![Shell Login Page](images/shell_login.png)
-- You can:
+From the shell prompt, you can:
   - Run Linux shell commands (`ls`, `cd`, `python`, etc.)
   - Create and manage files
   - Install software
-  - Use module system 
+  - Use the module system 
 
 Closing the terminal browser tab does not stop the command that is running or the compute session.
 
-### Finding software
+### Load and unload software
 
-When you log in to a terminal, you can enter the `module list` command to view a list of modules:
+Typically, loading modules is as simple as entering `module load <software_name>`. The `<software_name>` must be visible when you run `module av`.
+
+By entering:
+
+```
+module load <software_name>
+```
+
+Lmod will set your environment such that the software specified in `<software_name>` will be placed in your `PATH`, and then you can run the commands associated with `<software_name>`.
+
+If there are multiple versions of `<software_name>`, you can specify a version:
+
+```
+module load <software_name>/<version>
+```
+
+For example, to load `gcc` version 12.3.0, enter:
+
+```
+module load gcc/12.3.0
+```
+
+If no version is specified:
+
+```
+module load gcc
+```
+
+then the default version will be loaded. The default version is indicated with a `(D)` next to it after running `module av`.
+
+To unload a specific module, enter:
+
+```
+module unload <software_name>
+```
+
+To see the modules that you currently have loaded, enter:
+
+```
+module list
+```
+
+To see all modules that are compatible with the currently loaded modules and available to be loaded, enter:
+
+```
+module av
+```
+
+To unload all currently loaded modules and reset your environment, enter:
+
+```
+module purge
+```
+
+To reload the default `usc` module collection, enter:
+
+```
+module load usc
+```
+
+Enter `module help` to view more information about the available `module` commands.
+
+### Find software with `module list`
+
+In the terminal, enter the `module list` command to view a list of loaded modules:
 
 ```
 work@main1[XUIaZJhn-sessio]:~$ module list
@@ -43,7 +106,7 @@ This is our default software stack and the recommended one for most users, based
 
 The naming convention for modules is `<software_name>/<version>` (e.g., `gcc/13.3.0`).
 
-#### Using `module av`
+### Use `module av`
 
 To see what modules you can load into your environment, enter the command `module av`. With `gcc/13.3.0` loaded, this will print a large number of available modules:
 
@@ -108,9 +171,9 @@ Use "module keyword key1 key2 ..." to search for all possible modules matching a
 
 To explore the software stacks available, load one of these core modules and then see which new ones are unlocked. For example, to see all applications built with a certain compiler, load that compiler module and then enter `module av`.
 
-#### Using `module spider`
+### Use `module spider`
 
-If you know the name of a software package, use the `module spider` command to find out if it is available and how to load it.
+If you know the name of a software package you want to use, enter the `module spider` command to find out if it is available and how to load it.
 
 For example, to search for Open MPI modules:
 
@@ -133,7 +196,7 @@ work@main1[XUIaZJhn-sessio]:~$  module spider openmpi
 -----------------------------------------------------------------------------------
 ```
 
-This shows that there are two versions of Open MPI available. For more specific information, add the version to your command as given in the example:
+This shows that there are two versions of Open MPI available. For more specific information, add the desired version to the `module spider` command:
 
 ```
 work@main1[XUIaZJhn-sessio]:~$  module spider openmpi/5.0.5
@@ -156,73 +219,6 @@ work@main1[XUIaZJhn-sessio]:~$  module spider openmpi/5.0.5
       Open MPI offers advantages for system and software vendors, application
       developers and computer science researchers.
 ```
-
-
-
-
-### Loading and unloading software
-
-Typically, loading modules is as simple as entering `module load <software_name>`. The `<software_name>` must be visible when you run `module av`.
-
-By entering:
-
-```
-module load <software_name>
-```
-
-Lmod will set your environment such that the software specified in `<software_name>` will be placed in your `PATH`, and then you can run the commands associated with `<software_name>`.
-
-If there are multiple versions of `<software_name>`, you can specify a version:
-
-```
-module load <software_name>/<version>
-```
-
-For example, to load `gcc` version 12.3.0, enter:
-
-```
-module load gcc/12.3.0
-```
-
-If no version is specified:
-
-```
-module load gcc
-```
-
-then the default version will be loaded. The default version is indicated with a `(D)` next to it after running `module av`.
-
-To unload a specific module, enter:
-
-```
-module unload <software_name>
-```
-
-To see the modules that you currently have loaded, enter:
-
-```
-module list
-```
-
-To see all modules that are compatible with the currently loaded modules and available to be loaded, enter:
-
-```
-module av
-```
-
-To unload all currently loaded modules and reset your environment, enter:
-
-```
-module purge
-```
-
-To reload the default `usc` module collection, enter:
-
-```
-module load usc
-```
-
-Enter `module help` to view more information about the available `module` commands.
 
 ### Environment management
 
@@ -265,13 +261,10 @@ The following have been reloaded with a version change:
   1) gcc/13.3.0 => gcc/12.3.0
 ```
 
-
-```
-
 ### Additional resources
 
-If you have questions about or need help with software modules, please [submit a help ticket](/user-support/submit-ticket) and we will assist you.
+If you have questions about or need help with software modules, please [submit a help ticket](https://www.carc.usc.edu/user-support/submit-ticket) and we will assist you.
 
 * [Lmod](https://lmod.readthedocs.io/en/latest/)
-* [User Guide for Lmod](https://lmod.readthedocs.io/en/latest/010_user.html)
+* [User Guids for Lmod](https://lmod.readthedocs.io/en/latest/010_user.html)
 * [Advanced User Guide for Personal Modulefiles](https://lmod.readthedocs.io/en/latest/020_advanced.html)
