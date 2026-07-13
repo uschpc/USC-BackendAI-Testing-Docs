@@ -27,7 +27,7 @@ flowchart TD
 
 ## Steps
 
-1. Once access is approved, **connect to the USC VPN** (if off-campus) and **log in via USC SSO / Duo** at [topanga.carc.usc.edu](https://topanga.carc.usc.edu).
+1. Once access is approved, **connect to the USC VPN** and **log in via USC SSO / Duo** at [topanga.carc.usc.edu](https://topanga.carc.usc.edu).
 2. **Select your project** in the top bar.
 3. Optionally **create a storage folder** and upload code/data ahead of time.
 4. **Launch a compute session**: Interactive, Batch, or Inference.
