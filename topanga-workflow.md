@@ -1,4 +1,4 @@
-# Topanga Usage Process
+# Topanga Usage Workflow
 
 ```mermaid
 flowchart TD
