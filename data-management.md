@@ -5,6 +5,9 @@ There are multiple places to store data on the Topanga system and can be categor
 * Topanga Filesystem
 * HPC Cluster filesystem
 
+Files can be downloaded from an interactive app to your laptop:
+Download: Use the App's "Download" button (in Jupyter file explorer).
+
 ## Session Specific Data
 
 | Path | Max Disk Capacity|
@@ -12,6 +15,16 @@ There are multiple places to store data on the Topanga system and can be categor
 |`/home/work`|50 GB|
 
 The "home" directory for every session is located at `/home/work`. Data here is temporarily stored on the Topanga filesystem and will be deleted when the session ends. **Do not store important or long-term data here.**
+
+/home/work is not persistent:
+What is it? Your desktop environment's default folder.
+Rule: Treat this like a scratchpad. Any file saved here vanishes when you destroy the session.
+Use for: Cache files, temporary downloads, logs.
+Topanga Persistent Storage: e.g. /home/work/storage (a directory you created and mounted during session creation):
+What is it? Your virtual hard drive mounted from the cloud storage.
+It can use up to 1TB and you can create several directories as long as the total size fits within 1TB.
+Rule: This is your Save Location.
+Use for: Code repositories, datasets, trained models (model.h5, checkpoint.pt).
 
 ## Topanga Persistent Storage
 | Path | Max Disk Capacity|
@@ -22,7 +35,6 @@ The "home" directory for every session is located at `/home/work`. Data here is 
 For data storage that will be persistent across multiple sessions, create a *storage folder*. Cost is based on active storage so use when you need to temporarily store data between sessions. For longer term data storage, it may be more cost efficent to use the /project2 or /scratch1 [filesystems](#hpc-cluster-filesystem).
 
 Because of limited capacity please keep usage **reasonable and proportional**. Users may be subject to **cleanup requests or per-user quotas**.
-
 
 ### Creating a storage folder
 To create a storage folder using the backend.ai interface. 
@@ -36,10 +48,6 @@ To create a storage folder using the backend.ai interface.
 * Auto Mount: Folders automatically mounted when a session is created. If selected, the folder name must start with a dot ('.').
 
 The **Folder name** will determine the system path that the directory will be available at in each session.
-
-
-
-
 
 ### Mounting a storage folder
 The storage folder can be mounted during the session creation process. 
@@ -57,3 +65,7 @@ These systems may offer:
 * Larger capacity
 * Better performance
 * Project-level data sharing
+
+### Persistent Storage with Virtual Folders
+
+Topanga connects your sessions to persistent storage through **Virtual Folders (vFolders)**. These folders can be mounted into your compute sessions regardless of which compute node the session runs on, making it easier to reuse code, data, and results across sessions. Virtual folders also support sharing and per-user or per-project quotas.

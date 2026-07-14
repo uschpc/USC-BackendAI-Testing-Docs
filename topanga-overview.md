@@ -64,10 +64,6 @@ Topanga offers several preset session configurations&mdash;both CPU-focused and 
 | gpu-xl  | 48 | 512 GB | 3.0 | 12 GB | $9.00 |
 | gpu-2xl | 62 | 746 GB | 4.0 | 16 GB | $12.00 |
 
-### Persistent Storage with Virtual Folders
-
-Topanga connects your sessions to persistent storage through **Virtual Folders (vFolders)**. These folders can be mounted into your compute sessions regardless of which compute node the session runs on, making it easier to reuse code, data, and results across sessions. Virtual folders also support sharing and per-user or per-project quotas.
-
 ### Additional resources
 
 - Official Backend.AI WebUI User Guide: <https://webui.docs.backend.ai/en/latest/index.html>
