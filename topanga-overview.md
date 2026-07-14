@@ -64,6 +64,23 @@ Topanga offers several preset session configurations&mdash;both CPU-focused and 
 | gpu-xl  | 48 | 512 GB | 3.0 | 12 GB | $9.00 |
 | gpu-2xl | 62 | 746 GB | 4.0 | 16 GB | $12.00 |
 
+### CARC Shared File Systems
+
+Topanga sessions can access several mounted CARC shared file systems. Sessions currently mount the shared `/home1`, `/project2`, and `/scratch1` storage systems used on other CARC resources such as Discovery and Endeavour. If your training data or project files already live in one of these locations, you usually do not need to transfer them with SFTP; you can access them directly from your Topanga session.
+
+| **Path** | **Best for** | **Notes** |
+|---|---|---|
+| `/home1` | Personal files, configuration files, scripts, and smaller code repositories | Persistent user home storage. Use this for lightweight files rather than large training datasets. |
+| `/project2` | Shared project or lab data, training datasets, checkpoints, and collaboration files | Recommended for project-owned data that multiple users or jobs may need to access. |
+| `/scratch1` | Temporary job output, intermediate files, and active training runs | Intended for scratch data rather than long-term storage. Move important results to `/project2` or another persistent location when the job finishes. |
+
+To confirm which storage locations are available in a session, open a terminal in Topanga and run:
+
+```bash
+df -h
+```
+
+The output should list the mounted storage systems available to that session. If you expect to see files from Discovery or Endeavour but do not see the corresponding `/home1`, `/project2`, or `/scratch1` mount, contact CARC support with the session details.
 ### Persistent Storage with Virtual Folders
 
 Topanga connects your sessions to persistent storage through **Virtual Folders (vFolders)**. These folders can be mounted into your compute sessions regardless of which compute node the session runs on, making it easier to reuse code, data, and results across sessions. Virtual folders also support sharing and per-user or per-project quotas.
