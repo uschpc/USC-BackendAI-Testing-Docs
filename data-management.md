@@ -1,71 +1,64 @@
+# Data Management
 
-There are multiple places to store data on the Topanga system and can be categorized into 3 locations kinds:
+There are 3 locations to store data on the Topanga AI Computing system:
 
-* Session Specific
-* Topanga Filesystem
-* HPC Cluster filesystem
+* Session specific directories
+* Topanga file system
+* CARC shared file systems
 
-Files can be downloaded from an interactive app to your laptop:
-Download: Use the App's "Download" button (in Jupyter file explorer).
-
-## Session Specific Data
+## Session specific data
 
 | Path | Max Disk Capacity|
 |---|---|
 |`/home/work`|50 GB|
 
-The "home" directory for every session is located at `/home/work`. Data here is temporarily stored on the Topanga filesystem and will be deleted when the session ends. **Do not store important or long-term data here.**
-
-/home/work is not persistent:
-What is it? Your desktop environment's default folder.
-Rule: Treat this like a scratchpad. Any file saved here vanishes when you destroy the session.
-Use for: Cache files, temporary downloads, logs.
-Topanga Persistent Storage: e.g. /home/work/storage (a directory you created and mounted during session creation):
-What is it? Your virtual hard drive mounted from the cloud storage.
-It can use up to 1TB and you can create several directories as long as the total size fits within 1TB.
-Rule: This is your Save Location.
-Use for: Code repositories, datasets, trained models (model.h5, checkpoint.pt).
+The home directory for every session is located at `/home/work`. This is your desktop environment's default folder, used for cache files, temporary downloads, and logs. Data here is temporarily stored on the Topanga filesystem and will be deleted when the session ends. **Do not store important or long-term data here.**
 
 ## Topanga Persistent Storage
+
 | Path | Max Disk Capacity|
 |---|---|
-|`/home/folder_name`|1 TB|
+|`/home/your-folder_name`|1 TB|
 
+For data storage that will be persistent across multiple sessions, create a storage folder under `/home/your-folder-name`. These folders are best used for code repositories, datasets, trained models (model.h5, checkpoint.pt). Persistent storage a **fee-based** service for when you need to temporarily store data between sessions. For long term data storage or larger data sets, it is more cost effective to use the /project2 or /scratch1 file systems (see [HPC cluster file systems](#hpc-cluster-file-systems)).
 
-For data storage that will be persistent across multiple sessions, create a *storage folder*. Cost is based on active storage so use when you need to temporarily store data between sessions. For longer term data storage, it may be more cost efficent to use the /project2 or /scratch1 [filesystems](#hpc-cluster-filesystem).
-
-Because of limited capacity please keep usage **reasonable and proportional**. Users may be subject to **cleanup requests or per-user quotas**.
+Because of limited capacity, please keep usage **reasonable and proportional**. Users may be subject to **cleanup requests or per-user quotas**.
 
 ### Creating a storage folder
-To create a storage folder using the backend.ai interface. 
 
+Storage folders can be created from the Start page or during a new session initiation.
+
+![Start](images/create-storage-start.png)
+![Session](images/create-storage-session.png)
+
+Both methods will prompt a pop-up window where you can set the usage mode, enter a folder name, and set permissions.
 
 ![test](images/create_new_storage_folder.png)
 
-**Usage Mode**: Sets the purpose of the folder.
-* General: Defines a folder for storing various data in a general-purpose manner.
-* Models: Defines a folder specialized for model serving and management. If this mode is selected, it is also possible to toggle the folder's copy availability.
-* Auto Mount: Folders automatically mounted when a session is created. If selected, the folder name must start with a dot ('.').
-
-The **Folder name** will determine the system path that the directory will be available at in each session.
+**Usage Mode** sets the purpose of the folder:
+* **General**: The default, general-purpose definition.
+* **Models**: Defines a folder specialized for model serving and management. If this mode is selected, the option to make the folder cloneable becomes available.
+* **Auto Mount**: Sets the folder to automatically mount when a session is created. If selected, the folder name *must* start with a dot ('.').
 
 ### Mounting a storage folder
-The storage folder can be mounted during the session creation process. 
+
+Storage folders are mounted during the session creation process. If a storage folder already exists before creating a session, it will appear automatically in the list of available folders in the **Data & Storage** section of the session creation. If the folder is created during the sessions, it will show up as available and automatically selected for mounting to your new session.
 
 ![test](images/add_storage_folder_to_session.png)
-Under the 'Data & Storage' section, folders selected will be available during the session.
-## HPC Cluster Filesystem
-| Path | Max Disk Capacity|
-|---|---|
-|`/home/$USER`|100 GB|
-|`/project2/$PI_NAME_PROJECT_ID`|Quota dependent|
-|`/scratch2/$USER`|10 TB |
 
-These systems may offer:
+## CARC shared file systems
+
+| Path | Max Disk Capacity | Best for | Notes |
+|---|---|---|---|
+|`/home/$USER`|100 GB| Personal files, configuration files, scripts, and smaller code repositories | Persistent user home storage. Use this for lightweight files rather than large training datasets. |
+|`/project2/$PI_NAME_PROJECT_ID`|Quota dependent| Shared project or lab data, training datasets, checkpoints, and collaboration files | Recommended for project-owned data that multiple users or jobs may need to access. |
+|`/scratch2/$USER`|10 TB | Temporary job output, intermediate files, and active training runs | Intended for scratch data rather than long-term storage. Move important results to `/project2` or another persistent location when the job finishes. |
+
+These systems offer:
 * Larger capacity
 * Better performance
 * Project-level data sharing
 
-### Persistent Storage with Virtual Folders
+## Persistent Storage with Virtual Folders
 
 Topanga connects your sessions to persistent storage through **Virtual Folders (vFolders)**. These folders can be mounted into your compute sessions regardless of which compute node the session runs on, making it easier to reuse code, data, and results across sessions. Virtual folders also support sharing and per-user or per-project quotas.
