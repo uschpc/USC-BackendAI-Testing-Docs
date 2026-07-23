@@ -12,7 +12,7 @@ flowchart TD
     Inference["Inference Session"]
     ServeModel["Serve Model and<br/>Generate API Token"]
     Work["Work on Research Project"]
-    Lifecycle["Pause or Terminate Session"]
+    Lifecycle["Terminate Session"]
     End(["End"])
 
     Start --> VpnSso --> SelectProject --> CreateFolder --> Launch
@@ -33,4 +33,4 @@ flowchart TD
 4. **Launch a compute session**: Interactive, Batch, or Inference.
    - Inference sessions additionally require creating a model-definition file and generating an API token before serving traffic.
 5. **Work on your research project**.
-6. **Pause or terminate the session** when finished to manage cost and preserve state appropriately.
+6. **Terminate the session** when finished to manage cost and preserve state appropriately.
