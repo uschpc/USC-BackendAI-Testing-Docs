@@ -75,7 +75,7 @@ To see all modules that are compatible with the currently loaded modules and ava
 module av
 ```
 
-`module av`, short for `module avail`, lists the modules that are available in your current environment based on the modules you have already loaded. In contrast, `module spider` searches the full module tree, including modules that may require loading another compiler or dependency module first.
+`module av`, short for `module avail`, lists the modules that are available in your current environment based on the modules you have already loaded. 
 
 To unload all currently loaded modules and reset your environment, enter:
 
