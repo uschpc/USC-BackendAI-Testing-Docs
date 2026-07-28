@@ -10,7 +10,7 @@ Topanga supports several ways to run your work:
 
 [Log In To Topanga](https://topanga.carc.usc.edu)
 
-Topanga is only be accessible via a connection to either USC's Secure network or a USC VPN. Instructions for setting up a VPN connection can be found at the following links:
+Topanga is accessible only while connected to USC VPN. Instructions for setting up a VPN connection can be found at the following links:
 
 * [Windows](https://itservices.usc.edu/anyconnect/windows/)
 * [MacOS](https://itservices.usc.edu/anyconnect/mac/)
