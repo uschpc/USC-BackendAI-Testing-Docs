@@ -75,6 +75,8 @@ To see all modules that are compatible with the currently loaded modules and ava
 module av
 ```
 
+`module av`, short for `module avail`, lists the modules that are available in your current environment based on the modules you have already loaded. In contrast, `module spider` searches the full module tree, including modules that may require loading another compiler or dependency module first.
+
 To unload all currently loaded modules and reset your environment, enter:
 
 ```
@@ -174,6 +176,9 @@ To explore the software stacks available, load one of these core modules and the
 ### Use `module spider`
 
 If you know the name of a software package you want to use, enter the `module spider` command to find out if it is available and how to load it.
+
+Unlike `module av`, which shows only what is currently available to load, `module spider` can find software across all module hierarchies and show which prerequisite modules must be loaded first.
+
 
 For example, to search for Open MPI modules:
 
