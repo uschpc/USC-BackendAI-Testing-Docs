@@ -18,7 +18,7 @@ Topanga is accessible only while connected to USC VPN. Instructions for setting 
 
 ### Request access
 
-Topanga is available to all CARC users. You must belong to an active project and request access to Topanga through the [CARC user portal](https://hpcaccount.usc.edu/). For instructions on requesting access, refer to the Getting Started with Topanga section (/user-guides/topanga/getting-started-topanga). 
+Topanga is available to all CARC users. You must belong to an active project and request access to Topanga through the [CARC user portal](https://hpcaccount.usc.edu/). For instructions on requesting access, refer to the [Getting Started with Topanga](getting-started-topanga.md)
 
 ::: {.alert .alert-info}
 *Topanga is a ***paid resource***. Once access to the platform is acquired, ***any user*** on the project can request a paid session that will get billed to the associated project's account.*
