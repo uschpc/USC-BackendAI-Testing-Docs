@@ -9,7 +9,7 @@ Before requesting an allocation, make sure you have or belong to an active CARC 
 1. Go to the CARC User Portal: [https://hpcaccount.usc.edu](https://hpcaccount.usc.edu).
 2. Sign in with your USC NetID and complete Duo if prompted.
 3. Select the project that should receive Topanga access or create a new project.
-4. On the Project Detail page, select the blue **Update Project Information** button at the topn to update your billing contact information and full worktag number in the format of company.costcenter.ppgg (e.g., USC.CA123456.PG1234567). Topanga allocations will not be approved without this information.
+4. On the Project Detail page, select the blue **Update Project Information** button at the top to update your billing contact information and full worktag number in the format of company.costcenter.ppgg (e.g., USC.CA123456.PG1234567). Topanga allocations will not be approved without this information.
 5. On the Project Details page again, scroll down to the **Allocations** table.
 5. Click the green **Request Resource Allocation** button.
 6. Choose **Topanga AI Computing Service (Cloud)** from the resource menu.
