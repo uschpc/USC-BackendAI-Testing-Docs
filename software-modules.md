@@ -266,5 +266,5 @@ The following have been reloaded with a version change:
 If you have questions about or need help with software modules, please [submit a help ticket](https://www.carc.usc.edu/user-support/submit-ticket) and we will assist you.
 
 * [Lmod](https://lmod.readthedocs.io/en/latest/)
-* [User Guids for Lmod](https://lmod.readthedocs.io/en/latest/010_user.html)
+* [User Guides for Lmod](https://lmod.readthedocs.io/en/latest/010_user.html)
 * [Advanced User Guide for Personal Modulefiles](https://lmod.readthedocs.io/en/latest/020_advanced.html)
