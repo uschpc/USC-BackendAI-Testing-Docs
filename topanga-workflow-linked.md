@@ -31,8 +31,6 @@ flowchart TD
     click Work "https://github.com/uschpc/USC-BackendAI-Testing-Docs/blob/main/software-modules.md" "Software Modules"
 ```
 
-> **Note:** GitHub's Mermaid renderer does not always support clickable nodes inside the diagram itself (link behavior varies by security settings). The step list below repeats each link as a normal Markdown link so they are guaranteed to work regardless.
-
 ## Steps
 
 1. Once access is approved, **connect to the USC VPN** (if off-campus) and **log in via USC SSO / Duo** at [topanga.carc.usc.edu](https://topanga.carc.usc.edu). See [Getting Started with Topanga](https://github.com/uschpc/USC-BackendAI-Testing-Docs/blob/main/getting-started-topanga.md).
