@@ -28,7 +28,7 @@ flowchart TD
     click SelectProject "https://github.com/uschpc/USC-BackendAI-Testing-Docs/blob/main/getting-started-topanga.md#top-bar-menu"
     click CreateFolder "https://github.com/uschpc/USC-BackendAI-Testing-Docs/blob/main/data-management.md#creating-a-storage-folder"
     click Launch "https://github.com/uschpc/USC-BackendAI-Testing-Docs/blob/main/running-jobs-and-apps.md#starting-a-new-session"
-    click ServeModel "https://github.com/uschpc/USC-BackendAI-Testing-Docs/blob/main/Inference-Service.md" "Inference Service"
+    click ServeModel "https://github.com/uschpc/USC-BackendAI-Testing-Docs/blob/main/Inference-Service.md#custom-inference"
     click Work "https://github.com/uschpc/USC-BackendAI-Testing-Docs/blob/main/software-modules.md" "Software Modules"
 ```
 
