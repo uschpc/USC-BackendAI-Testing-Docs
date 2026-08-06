@@ -56,12 +56,12 @@ Topanga offers several preset session configurations&mdash;both CPU-focused and 
 | cpu-lg  | 16 | 96 GB  | 0 | 2 GB | $0.50 |
 | cpu-xl  | 32 | 192 GB | 0 | 4 GB | $1.00 |
 | cpu-2xl | 62 | 368 GB | 0 | 4 GB | $1.80 |
-| gpu-2xs | 2  | 24 GB  | 0.1 | 1 GB  | $0.35 |
-| gpu-xs  | 4  | 48 GB  | 0.2 | 2 GB  | $0.70 |
-| gpu-sm  | 8  | 96 GB  | 0.5 | 2 GB  | $1.50 |
-| gpu-md  | 16 | 128 GB | 1.0 | 4 GB  | $3.00 |
-| gpu-lg  | 32 | 256 GB | 2.0 | 8 GB  | $6.00 |
-| gpu-xl  | 48 | 512 GB | 3.0 | 12 GB | $9.00 |
+| gpu-2xs | 2  | 18 GB  | 0.1 | 1 GB  | $0.35 |
+| gpu-xs  | 4  | 36 GB  | 0.2 | 2 GB  | $0.70 |
+| gpu-sm  | 8  | 92 GB  | 0.5 | 2 GB  | $1.50 |
+| gpu-md  | 16 | 186 GB | 1.0 | 4 GB  | $3.00 |
+| gpu-lg  | 32 | 372 GB | 2.0 | 8 GB  | $6.00 |
+| gpu-xl  | 48 | 558 GB | 3.0 | 12 GB | $9.00 |
 | gpu-2xl | 62 | 746 GB | 4.0 | 16 GB | $12.00 |
 
 ### Additional resources
