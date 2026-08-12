@@ -113,24 +113,6 @@ Once the session is **RUNNING**, click its name in the session list to open the 
 
 * **Terminate**: Select the red power button to end your session. Sessions can also be terminated from the Sessions dashboard by selecting the checkbox to the left of the session name and then selecting the red power symbol with a slash through it. Anything outside a mounted folder is deleted the moment the session ends, so move/copy any important data first.
 
-<!--
-Pausing the Session
-Action: Clicking "Pause" in the Session dashboard.
-Result: The container is frozen.
-Compute Cost: Reduced cost (resources released from active compute, but state kept).
-App Access: Apps become inaccessible until you resume the session.
-
-Within the terminal app:
-
-- You will see a shell prompt (e.g., `work@main1[gDz6uH2p-session]:~$`).
-- You can:
-  - Run Linux shell commands (`ls`, `cd`, `python`, etc.)
-  - Create and manage files
-  - Install software
-
-Closing the terminal browser tab does not stop the command that is running or the compute session.
--->
-
 ## Idle checks
 
 Topanga can auto-terminate sessions to reclaim resources. Three checkers may be active:
