@@ -8,7 +8,9 @@ You will need a HuggingFace access token with permission to the model you plan t
 
 You will also need a GPU resource preset large enough for the model. A 7B model in `bfloat16` needs ~16 GB GPU memory plus headroom for the KV cache; budget at least 0.2 H200 or equivalent.
 
-## Create an empty model storage folder
+## Inference workflow
+
+### 1. Create an empty model storage folder
 
 In **Data → Models**, create a new folder with usage type **Model**. Leave it empty for now. Both the YAML and the downloaded weights will live here.
 
@@ -16,7 +18,7 @@ In **Data → Models**, create a new folder with usage type **Model**. Leave it 
 
 ![](images/Inference_Service/1.png)
 
-## Create a `model-definition.yaml` file
+### 2. Create a `model-definition.yaml` file
 
 This file tells Backend.AI how to start the inference container, which port to expose, and how to health-check it. Save it locally as `model-definition.yaml`:
 
@@ -75,19 +77,19 @@ Other useful health-check options (defaults shown):
 * `expected_status_code: 200`.
 * `initial_delay: 60.0` — wait after container start before first check. Bump this to `300.0` for 70B+ models.
 
-## Upload the `model-definition.yaml`
+### 3. Upload the `model-definition.yaml`
 
 Open the model folder you just created and upload the YAML at the root.
 
 ![](images/Inference_Service/2.png)
 
-## Serving
+### 4. Serving
 
 Go to **Serving** and click **Start Service**
 
 ![](images/Inference_Service/3.png)
 
-## Fill out the service form
+### 5. Fill out the service form
 
 Key fields to set:
 
@@ -114,7 +116,7 @@ Select **Create** at the bottom.
 
 > Tip: there's a **Validate** button on the launcher that runs the start command in a test container and shows the log. Use it once before going live to catch YAML syntax errors or missing env vars early.
 
-## Wait for the service to become healthy
+### 6. Wait for the service to become healthy
 
 After creation you'll be redirected to the service detail page.
 
@@ -128,7 +130,7 @@ Status flow:
 
 Time-to-UNHEALTHY at startup with defaults is `initial_delay + interval × (max_retries + 1)`. With `max_retries: 500` and `interval: 10s` you get ~83 minutes of grace, which is what you want for a first-time download.
 
-## Session view
+### 7. Session view
 
 While the service runs, you can see its kernel under **Sessions**.
 
@@ -142,7 +144,7 @@ Wait for the server to start.
 
 ![](images/Inference_Service/12.png)
 
-## Generating API Tokens
+### 8. Generating API Tokens
 
 The next step is to generate an API token. This token will be used to authenticate your requests to the API.
 
@@ -161,7 +163,7 @@ Here, you need to specify the expiration date of the token. The default is 7 day
 
 Copy the token and save it. You will need this token to authenticate your requests to the API.
 
-## Built-in chat
+### 9. Built-in chat
 
 In the left column menu, under **Playground**, select **Chat** to open the WebUI's chat against your endpoint.
 
@@ -177,7 +179,7 @@ This will take you to the chat interface. You can now chat with the model.
 
 ![](images/Inference_Service/19.png)
 
-## Calling the API directly
+### 10. Calling the API directly
 
 Get the public endpoint from the Service Endpoint URL (port `10602` for this service).
 
