@@ -40,8 +40,6 @@ For each environment, you can select the **Version** (e.g. PyTorch 2.10 vs 2.8).
 
 You can also set **environment variables** (such as `PATH`, or `HF_TOKEN` for Hugging Face) here, if needed. Select **+ Add environment variables** and fill in the name/value pair (one row per variable). Use the **−** button to remove a row. Variables are exported into the shell of every kernel in the session.
 
-![](images/RUNNING_Jobs/6.png)
-
 Under **Resource allocation** you choose the specifications for you session:
 
 * **Resource Group** — the pool of host servers your session can run on. Choose the CPU group if you do not require and GPUs for your workload.
