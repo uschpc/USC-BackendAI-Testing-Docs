@@ -1,6 +1,6 @@
 # Running MPI on Topanga (single node and multi-node)
 
-This guide covers building and running MPI programs on Topanga, on one node or across several. It is part of the Topanga user guide series.
+This guide covers building and running MPI programs on Topanga, on one node or across several.
 
 ## How multi-node sessions work on Topanga
 
