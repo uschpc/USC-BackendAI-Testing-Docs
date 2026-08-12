@@ -4,7 +4,7 @@ This guide covers building and running MPI programs on Topanga, on one node or a
 
 ## How multi-node sessions work on Topanga
 
-When you launch a multi-node session, Topanga gives you one container on each node. The container your terminal lands in is called `main1`; the others are `sub1`, `sub2`, and so on. You never need to log in to the sub nodes: you work entirely from `main1`, and `mpirun` starts and manages the processes on the other nodes for you. The nodes reach each other by those hostnames, which is why the MPI hostfile below simply lists them.
+When you launch a multi-node session, Topanga gives you one container on each node. The container your terminal lands in is called `main1`; the others are `sub1`, `sub2`, and so on. You never need to log in to the sub nodes&mdash;you work entirely from `main1` and `mpirun` starts and manages the processes on the other nodes for you. The nodes reach each other by those hostnames, which is why the MPI hostfile below simply lists them.
 
 All nodes in a session see the network storage systems: Topanga's data folder as well as `/home1`, `/scratch1`, and `/project2`. A program built once in any of these locations is immediately visible on every node, so there is no copying or staging step.
 
