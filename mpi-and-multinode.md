@@ -35,15 +35,15 @@ sub1  slots=62
 sub2  slots=62
 sub3  slots=62
 ```
-where `slots=62` shows the number of CPU cores that each of your nodes have and number of subs depend on the size of the cluster that you launched.
+`slots=62` shows the number of CPU cores that each of your nodes have and the number of subs depend on the size of the cluster that you launched.
 
-This is the whole recipe. The rest of this page explains the non-obvious flags and how to recognize the errors you will hit if you deviate from it.
+See below for explanations of the non-obvious flags and how to recognize common errors.
 
 ## Building
 
-### Use HPC-X, not the spack OpenMPI
+### Use HPC-X, not the Spack OpenMPI
 
-The spack `openmpi/5.0.5` module is built against Slurm/munge, which Topanga does not have, so its compiler wrappers fail before they can compile anything:
+The Spack `openmpi/5.0.5` module is built against slurm/munge, which Topanga does not have, so its compiler wrappers fail before they can compile anything:
 
 ```
 error while loading shared libraries: libmunge.so.2: cannot open shared object file
@@ -53,7 +53,7 @@ Use `hpcx-mpi/2.20` instead (NVIDIA HPC-X, which is OpenMPI 4.1.7 + UCX). It has
 
 ### Two environment fixes for this container image
 
-The container image keeps its C runtime and system headers in places the spack toolchain does not search by default:
+The container image keeps its C runtime and system headers in places the Spack toolchain does not search by default:
 
 ```bash
 export LIBRARY_PATH=/usr/lib/x86_64-linux-gnu:$LIBRARY_PATH    # crt1.o, needed for any linking
@@ -70,7 +70,7 @@ export CPATH=/usr/include/x86_64-linux-gnu:/usr/include:$CPATH # system headers,
 mpirun -n 50 --bind-to none ./myapp
 ```
 
-`--bind-to none` is required everywhere on Topanga: the containers do not allow MPI to pin processes to specific CPU cores, so without this flag `mpirun` fails at startup.
+`--bind-to none` is required everywhere on Topanga&mdash;the containers do not allow MPI to pin processes to specific CPU cores, so without this flag `mpirun` fails at startup.
 
 ### Multiple nodes
 
@@ -78,9 +78,9 @@ mpirun -n 50 --bind-to none ./myapp
 mpirun --hostfile hostfile -np 200 --bind-to none -x UCC_TL_SHM_TUNE=0 ./myapp
 ```
 
-This runs at full InfiniBand speed between nodes and over shared memory within each node. No network tuning is needed; the only addition over the single-node command is the hostfile and one flag, explained next.
+This runs at full InfiniBand speed between nodes and over shared memory within each node. No network tuning is needed&mdash;the only addition over the single-node command is the hostfile and one flag, explained below.
 
-### The one extra multi-node flag
+### One extra multi-node flag
 
 Without `-x UCC_TL_SHM_TUNE=0`, a multi-node run hangs at the first collective operation (Bcast, Allreduce, Barrier, ...) and floods the screen with:
 
@@ -88,7 +88,7 @@ Without `-x UCC_TL_SHM_TUNE=0`, a multi-node run hangs at the first collective o
 tl_shm_team.c ... Child failed to attach to shmseg, errno: Invalid argument
 ```
 
-In plain terms: HPC-X ships with an add-on called UCC that tries to speed up collective operations. One of UCC's tricks is a special shared-memory channel between ranks on the same node, and that particular trick is broken inside Topanga's containers when many ranks run per node. The flag tells UCC to skip that one trick; everything else works normally. This is a bug in the UCC library itself, not a system limit, so there is nothing to fix on your side or to request from the admins.
+HPC-X ships with an add-on called UCC that tries to speed up collective operations. One of UCC's tricks is a special shared-memory channel between ranks on the same node, and that particular trick is broken inside Topanga's containers when many ranks run per node. The flag tells UCC to skip that one trick; everything else works normally. *This is a bug in the UCC library itself*, not a system limit, so there is nothing to fix on your side or to request from the admins.
 
 Any one of these three flags fixes it (all three were verified to give identical, correct results; the first and third were also timed back-to-back and show no performance difference):
 
