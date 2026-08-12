@@ -45,7 +45,7 @@ If a multi-node request can fit on a single compute node, Topanga keeps the cont
 
 ### Available sessions
 
-Topanga offers several preset session configurations&mdash;both CPU-focused and GPU-focused&mdash;to meet different needs. Charges are based on the selected session type and the time the session is running, from the session start time through its termination time. Billing information is available on the 15th and at the end of each month. Terminate sessions when they are no longer needed to stop additional charges.
+Topanga offers several preset session configurations&mdash;both CPU-focused and GPU-focused&mdash;to meet different needs. Charges are based on the selected session type and the time the session is running, from the session start time through its termination time. Terminate sessions as soon as they are no longer needed to prevent additional charges. The account associated with your Topanga project is debited on the 15th and last day of each month. Invoices are sent out to PIs a week before to allow time for review and submitting a dispute. If you need to submit a dispute, please [submit a ticket](https://www.carc.usc.edu/user-support/submit-ticket).
 
 | **Session name** | **CPU cores** | **Memory** | **Fractional GPUs (fGPUs)** | **Shared Memory** | **Price per hour**|
 |---|---|---|---|---|---|
