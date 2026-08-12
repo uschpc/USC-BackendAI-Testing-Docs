@@ -1,4 +1,4 @@
-# Custom Inference
+# Inference Service
 
 Topanga AI Computing offers four inference runtime variants: **vLLM**, **NVIDIA NIM**, **Predefined Image Command**, and **Custom**. The first three start from a built-in launch commands and only need a few env vars. Use **Custom** (the path used here) when you want full control via your own `model-definition.yaml`&mdash;for example, downloading the model on first start, picking specific vLLM flags, or running pre-start actions.
 
@@ -8,7 +8,7 @@ You will need a HuggingFace access token with permission to the model you plan t
 
 You will also need a GPU resource preset large enough for the model. A 7B model in `bfloat16` needs ~16 GB GPU memory plus headroom for the KV cache; budget at least 0.2 H200 or equivalent.
 
-## Inference workflow
+## Custom inference workflow
 
 ### 1. Create an empty model storage folder
 
