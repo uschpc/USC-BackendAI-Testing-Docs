@@ -27,9 +27,9 @@ Persistent storage folders can be created from the Topanga dashboard or during s
 ![test](images/data-management/create_new_storage_folder.png)
 
 **Usage Mode** defines the purpose of the folder:
-* General: Defines a folder for storing various data in a general-purpose manner.
-* Models: Defines a folder specialized for model serving and management. If this mode is selected, it is also possible to toggle the folder's copy availability.
-* Auto Mount: Folders automatically mounted when a session is created. If selected, the folder name must start with a dot ('.').
+* *General*: Defines a folder for storing various data in a general-purpose manner.
+* *Models*: Defines a folder specialized for model serving and management. If this mode is selected, it is also possible to toggle the folder's copy availability.
+* *Auto Mount*: Folders automatically mounted when a session is created. If selected, the folder name must start with a dot ('.').
 
 The **folder name** will determine the system path that the directory will be available at in each session.
 
