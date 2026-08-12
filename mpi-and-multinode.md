@@ -27,7 +27,7 @@ mpirun -n 50 --bind-to none ./myapp
 mpirun --hostfile hostfile -np 200 --bind-to none -x UCC_TL_SHM_TUNE=0 ./myapp
 ```
 
-where `hostfile` lists your session's nodes and how many ranks each may hold:
+`hostfile` lists your session's nodes and how many ranks each may hold:
 
 ```
 main1 slots=62
