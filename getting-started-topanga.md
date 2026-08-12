@@ -21,6 +21,24 @@ Before requesting an allocation, make sure you have or belong to an active CARC 
    * Start date, deadline, or renewal reason, if relevant
 8. Submit the request.
 
+```mermaid
+flowchart TD
+    Start(["Start"])
+    Prereq{"PI has active<br/>CARC project?"}
+    FixPrereq["Set Up CARC Project"]
+    WorkTag{"USC Worktag Present<br/>for Project?"}
+    AddTag["Add USC Worktag<br/>for Project"]
+    ReqAccess["Request Topanga Access<br/>hpcaccount.usc.edu"]
+    Approved(["Access Request Approved<br/>(Status: Active)"])
+
+    Start --> Prereq
+    Prereq -- "No" --> FixPrereq --> WorkTag
+    Prereq -- "Yes" --> WorkTag
+    WorkTag -- "No" --> AddTag --> ReqAccess
+    WorkTag -- "Yes" --> ReqAccess
+    ReqAccess --> Approved
+```
+
 After approval, the allocation will appear in the project's allocation table with one of the following statuses:
    * **New**: The request has been submitted and is waiting for CARC review.
    * **Active**: CARC has approved the request and the project can use Topanga.
