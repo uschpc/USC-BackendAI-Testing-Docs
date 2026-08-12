@@ -166,14 +166,6 @@ Here is an example workflow using JupyterLab:
 
 Use Git to push code to a remote repository (GitHub/GitLab) from within the app terminal.
 
-### Jupyter Notebook
-
-Click the Jupyter icon to open a notebook in a new tab. The container's libraries are already available, so no extra `pip install` is required. Click **NEW → Notebook** to create an `.ipynb` file. Files created this way live in `/home/work` and are deleted when the session ends. Save important data that you don't want to lose into a mounted folder. See  on mounted folders.
-
-![](images/RUNNING_Jobs/17.png)
-
-> The notebook file explorer also contains an `id_container` file with a private SSH key. Download it if you want to SSH/SFTP into the container from your laptop.
-
 ### Stopping the App
 
 Close the interactive app browser tab to stop the app. Your code, loaded variables, and model state remain in RAM. You can reconnect later exactly where you left off. Stopping an interactive app does not end the session&mdash;the session continues running on the backend and continues accruing fees.
