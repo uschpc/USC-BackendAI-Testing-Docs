@@ -14,7 +14,7 @@ Download: Use the App's "Download" button (in Jupyter file explorer).
 |---|---|
 |`/home/folder_name`|1 TB|
 
-Topanga connects your sessions to persistent storage through Virtual Folders (vFolders). These folders can be mounted into your compute sessions regardless of which compute node the session runs on, making it easier to reuse code, data, and results across sessions. Virtual folders also support sharing and per-user or per-project quotas. Persistent storage has a quota of 1 TB. You can create several directories as long as the total size fits within 1 TB. It is best used for code repositories, datasets, and trained models (model.h5, checkpoint.pt).
+Topanga connects your sessions to persistent storage through virtual folders (vFolders). These folders can be mounted into your compute sessions regardless of which compute node the session runs on, making it easier to reuse code, data, and results across sessions. Virtual folders also support sharing and per-user or per-project quotas. Persistent storage has a quota of 1 TB. You can create several directories as long as the total size fits within 1 TB. It is best used for code repositories, datasets, and trained models (model.h5, checkpoint.pt).
 
 Cost is based on active storage so use when you need to temporarily store data between sessions. For longer term data storage, it may be more cost efficient to use the /project2 or /scratch1 [filesystems](#hpc-cluster-filesystem).
 
