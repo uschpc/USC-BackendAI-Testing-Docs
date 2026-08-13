@@ -114,7 +114,7 @@ The dashboard is your primary entry point for launching tasks. It features quick
 | **Project** | A working unit inside a domain. Users can belong to multiple projects. |
 | **Compute Session** | An isolated running workspace where your selected apps, code, and resources are available. |
 | **Image** | A pre-built software environment with runtimes, tools, and ML frameworks. |
-| **Virtual Folder (vFolder)** | A persistent storage folder that can be mounted into compute sessions. |
+| **Persistent Storage** | A virtual storage folder that can be mounted into compute sessions. |
 | **Application Service** | An app, such as Jupyter, VS Code, Terminal, or TensorBoard, launched inside a compute session. |
 
 ### Getting help
