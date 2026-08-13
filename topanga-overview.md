@@ -20,9 +20,7 @@ Topanga is accessible only while connected to USC VPN. Instructions for setting 
 
 Topanga is available to all CARC users. You must belong to an active project and request access to Topanga through the [CARC user portal](https://hpcaccount.usc.edu/). For instructions on requesting access, refer to the [Getting Started with Topanga](getting-started-topanga.md).
 
-::: {.alert .alert-info}
-*Topanga is a ***paid resource***. Once access to the platform is acquired, ***any user*** on the project can request a paid session that will get billed to the associated project's account.*
-:::
+> *Topanga is a ***paid resource***. Once access to the platform is acquired, ***any user*** on the project can request a paid session that will get billed to the associated project's account.*
 
 ### Key features
 
@@ -69,5 +67,5 @@ Topanga offers several preset session configurations&mdash;both CPU-focused and 
 - Official Backend.AI WebUI User Guide: <https://webui.docs.backend.ai/en/latest/index.html>
 - Cluster Compute Sessions: <https://webui.docs.backend.ai/en/latest/cluster_session/cluster_session.html>
 - Model Serving: <https://webui.docs.backend.ai/en/latest/model_serving/model_serving.html>
-- Mounting vFolders: <https://webui.docs.backend.ai/en/latest/mount_vfolder/mount_vfolder.html>
+- Mounting persistent storage folders: <https://webui.docs.backend.ai/en/latest/mount_vfolder/mount_vfolder.html>
 
