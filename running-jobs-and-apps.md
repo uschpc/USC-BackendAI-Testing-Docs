@@ -168,7 +168,7 @@ If you need to expose a custom web service (like a local Flask or Streamlit app)
 
 #### Multiple Users, One App
 
-If you use a Team vFolder, multiple members can launch sessions with that folder attached. Topanga ensures file locking and prevents corruption.However, do not share one single session between two people simultaneously.
+If you use a team persistent storage folder, multiple members can launch sessions with that folder attached. Topanga ensures file locking and prevents corruption.However, do not share one single session between two people simultaneously.
 
 <!--
 Data Check: Did I save my notebook to /home/work/storage?
