@@ -14,11 +14,11 @@ Download: Use the App's "Download" button (in Jupyter file explorer).
 |---|---|
 |`/home/folder_name`|1 TB|
 
-Topanga connects your sessions to persistent storage through virtual folders (vFolders). These folders can be mounted into your compute sessions regardless of which compute node the session runs on, making it easier to reuse code, data, and results across sessions. Virtual folders also support sharing and per-user or per-project quotas. Persistent storage has a quota of 1 TB. You can create several directories as long as the total size fits within 1 TB. It is best used for code repositories, datasets, and trained models (model.h5, checkpoint.pt).
+Persistent storage folders can be mounted into your compute sessions regardless of which compute node the session runs on, making it easier to reuse code, data, and results across sessions. The persistent storage system also supports sharing and per-user or per-project quotas. Persistent storage has a quota of 1 TB per PI. You can create several directories as long as the total size fits within 1 TB. It is best used for code repositories, datasets, and trained models (model.h5, checkpoint.pt).
 
-Cost is based on active storage so use when you need to temporarily store data between sessions. For longer term data storage, it may be more cost efficient to use the /project2 or /scratch1 [filesystems](#hpc-cluster-filesystem).
+There is no cost for storage as long the PI can stay under the 1TB quota. For longer term or higher capacity data storage, it may be more cost efficient to use the /project2 or /scratch1 [filesystems](#hpc-cluster-filesystem).
 
-Because of limited capacity please keep usage **reasonable and proportional**. Users may be subject to **cleanup requests or per-user quotas**.
+Users may be subject to **cleanup requests or per-user quotas**.
 
 ### Creating a persistent storage folder
 
@@ -99,11 +99,17 @@ Create a new Bookmark and fill in the Host and Port information provided by the 
 
 #### Command line:
 
+For those familiar with `sftp` it's possible to manage files through the command line but you will need a few extra steps. If not already set, you will need to set proper permissions on the ssh key:
+
 ```
 chmod 600 ./id_container
+```
+
+Since the host configuration you are connecting to will vary with each session, disable `StrictHostKeyChecking` and `UserKnownHostsFile`. You will also need to supply the port number provided by the SSH/SFTP App Dialog Menu:
+
+```
 sftp -i ./id_container -P $PORT_NUMBER -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null work@topanga.carc.usc.edu
 ```
-`$PORT_NUMBER` is given in SSH/SFTP App Dialog Menu
 
 
 
