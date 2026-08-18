@@ -62,6 +62,10 @@ Topanga offers several preset session configurations&mdash;both CPU-focused and 
 | gpu-xl  | 48 | 558 GB | 3.0 | 12 GB | $9.00 |
 | gpu-2xl | 62 | 746 GB | 4.0 | 16 GB | $12.00 |
 
+### Session limits
+
+To ensure fair resource sharing, the following limits apply:
+
 | **Resource type** | **Maximum limit** |
 |---|---|
 | Maximum session duration | 1 week (Inference Session Type is exempt) |
