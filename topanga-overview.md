@@ -73,7 +73,7 @@ To ensure fair resource sharing, the following limits apply:
 | Maximum concurrent sessions | 5 |
 | Maximum CPUs per user | 62 |
 | Maximum GPUs per user | 4 |
-| Maximum memory per user | 747 GB |
+| Maximum memory per user | 746 GB |
 
 ### Additional resources
 
