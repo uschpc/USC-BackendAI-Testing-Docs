@@ -62,6 +62,15 @@ Topanga offers several preset session configurations&mdash;both CPU-focused and 
 | gpu-xl  | 48 | 558 GB | 3.0 | 12 GB | $9.00 |
 | gpu-2xl | 62 | 746 GB | 4.0 | 16 GB | $12.00 |
 
+| **Resource type** | **Maximum limit** |
+|---|---|
+| Maximum session duration | 1 week (Inference Session Type is exempt) |
+| Maximum session idle time | 4 hours (Inference Session Type is exempt) |
+| Maximum concurrent sessions | 5 |
+| Maximum CPUs per user | 62 |
+| Maximum GPUs per user | 4 |
+| Maximum memory per user | 747 GB |
+
 ### Additional resources
 
 - Official Backend.AI WebUI User Guide: <https://webui.docs.backend.ai/en/latest/index.html>
